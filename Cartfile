@@ -1,0 +1,9 @@
+# Reactive
+github "ReactiveKit/Bond"
+github "Thomvis/BrightFutures"
+
+    # Networking
+github "Alamofire/Alamofire"
+github "Alamofire/AlamofireImage"
+github "tristanhimmelman/AlamofireObjectMapper" 
+github "Alamofire/AlamofireNetworkActivityIndicator"
