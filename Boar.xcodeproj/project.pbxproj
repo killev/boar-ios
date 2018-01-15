@@ -32,6 +32,21 @@
 		D001AE0E200D3338006E8C36 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D001AE0A200D3338006E8C36 /* Cartfile */; };
 		D001AE0F200D3338006E8C36 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = D001AE0B200D3338006E8C36 /* Cartfile.resolved */; };
 		D001AE10200D3338006E8C36 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D001AE0C200D3338006E8C36 /* README.md */; };
+		D001AE12200D3381006E8C36 /* Alamofire+Futures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */; };
+		D001AE14200D3933006E8C36 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D001AE16200D3ACB006E8C36 /* Alamofire+FuturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */; };
+		D001AE18200D3B88006E8C36 /* Alamofire+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */; };
+		D001AE19200D4014006E8C36 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD7200D2D92006E8C36 /* Alamofire.framework */; };
+		D001AE1A200D4044006E8C36 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD5200D2D92006E8C36 /* AlamofireImage.framework */; };
+		D001AE1B200D4044006E8C36 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD9200D2D92006E8C36 /* AlamofireNetworkActivityIndicator.framework */; };
+		D001AE1C200D4044006E8C36 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD8200D2D92006E8C36 /* AlamofireObjectMapper.framework */; };
+		D001AE1D200D4044006E8C36 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
+		D001AE1E200D4044006E8C36 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D001AE1F200D4044006E8C36 /* Differ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD3200D2D92006E8C36 /* Differ.framework */; };
+		D001AE20200D4044006E8C36 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD2200D2D92006E8C36 /* ObjectMapper.framework */; };
+		D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D001AE22200D4044006E8C36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +125,10 @@
 		D001AE0A200D3338006E8C36 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		D001AE0B200D3338006E8C36 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		D001AE0C200D3338006E8C36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Futures.swift"; sourceTree = "<group>"; };
+		D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+FuturesTests.swift"; sourceTree = "<group>"; };
+		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
+		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D001AE14200D3933006E8C36 /* BrightFutures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +169,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D001AE19200D4014006E8C36 /* Alamofire.framework in Frameworks */,
+				D001AE1A200D4044006E8C36 /* AlamofireImage.framework in Frameworks */,
+				D001AE1B200D4044006E8C36 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
+				D001AE1C200D4044006E8C36 /* AlamofireObjectMapper.framework in Frameworks */,
+				D001AE1D200D4044006E8C36 /* Bond.framework in Frameworks */,
+				D001AE1E200D4044006E8C36 /* BrightFutures.framework in Frameworks */,
+				D001AE1F200D4044006E8C36 /* Differ.framework in Frameworks */,
+				D001AE20200D4044006E8C36 /* ObjectMapper.framework in Frameworks */,
+				D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */,
+				D001AE22200D4044006E8C36 /* Result.framework in Frameworks */,
 				D001ADF4200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +257,8 @@
 			children = (
 				D001ADED200D31E4006E8C36 /* Boar_ReactiveNetworking.h */,
 				D001ADEE200D31E4006E8C36 /* Info.plist */,
+				D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */,
+				D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */,
 			);
 			path = "Boar-ReactiveNetworking";
 			sourceTree = "<group>";
@@ -234,10 +266,20 @@
 		D001ADF9200D31E4006E8C36 /* Boar-ReactiveNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
+				D001AE23200D41DF006E8C36 /* Helpers */,
 				D001ADFA200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift */,
 				D001ADFC200D31E4006E8C36 /* Info.plist */,
+				D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */,
 			);
 			path = "Boar-ReactiveNetworkingTests";
+			sourceTree = "<group>";
+		};
+		D001AE23200D41DF006E8C36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D001AE24200D41FF006E8C36 /* Future+XCTest.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +392,7 @@
 					};
 					D001ADEA200D31E4006E8C36 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					D001ADF2200D31E4006E8C36 = {
@@ -466,6 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D001AE18200D3B88006E8C36 /* Alamofire+Auth.swift in Sources */,
+				D001AE12200D3381006E8C36 /* Alamofire+Futures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +518,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */,
 				D001ADFB200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift in Sources */,
+				D001AE16200D3ACB006E8C36 /* Alamofire+FuturesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +679,7 @@
 		D001ADCA200CF1C1006E8C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
@@ -652,6 +700,7 @@
 		D001ADCB200CF1C1006E8C36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
@@ -706,6 +755,7 @@
 		D001AE04200D31E4006E8C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -714,12 +764,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveNetworking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -730,6 +785,7 @@
 		D001AE05200D31E4006E8C36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -738,6 +794,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -757,6 +817,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworkingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveNetworkingTests";
@@ -773,6 +837,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworkingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveNetworkingTests";
