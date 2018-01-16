@@ -36,7 +36,7 @@ class AlamofireFuturesTests: XCTestCase {
                      method: .get,
                      parameters: [:],
                      encoding: URLEncoding.default,
-                     headers: Auth.basic1(user: "killev", password: "CrossPlusPlus50000"))
+                     headers: Auth.basic(user: "killev", password: "CrossPlusPlus50000"))
             .responseArray(G_H_Issue.self)
         
         XCTAssertFutureSuccess("testSimple", future: issues){ res in
