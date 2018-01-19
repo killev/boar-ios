@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Boar_ReactiveCoreData
+import Boar_ReactiveCoreData
 
 class Boar_ReactiveCoreDataTests: XCTestCase {
     

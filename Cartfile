@@ -2,8 +2,11 @@
 github "ReactiveKit/Bond"
 github "Thomvis/BrightFutures"
 
-    # Networking
+# Networking
 github "Alamofire/Alamofire"
 github "Alamofire/AlamofireImage"
 github "tristanhimmelman/AlamofireObjectMapper" 
 github "Alamofire/AlamofireNetworkActivityIndicator"
+
+# Context and DI
+github "Swinject/Swinject-CodeGeneration"

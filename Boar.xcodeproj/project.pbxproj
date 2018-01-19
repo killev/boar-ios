@@ -53,6 +53,7 @@
 		D00E603A20128ABC00771202 /* Boar_ReactiveCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00E603D20128ABC00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D00E604620128BBE00771202 /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* CoreDataContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveCoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E603720128ABC00771202 /* Boar_ReactiveCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveCoreDataTests.swift; sourceTree = "<group>"; };
 		D00E603920128ABC00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00E604520128BBE00771202 /* CoreDataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 			children = (
 				D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */,
 				D00E602B20128ABB00771202 /* Info.plist */,
+				D00E604520128BBE00771202 /* CoreDataContext.swift */,
 			);
 			path = "Boar-ReactiveCoreData";
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 					};
 					D00E602720128ABB00771202 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					D00E602F20128ABB00771202 = {
@@ -674,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00E604620128BBE00771202 /* CoreDataContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1035,7 @@
 		D00E604020128ABC00771202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1044,6 +1050,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveCoreData";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1054,6 +1061,7 @@
 		D00E604120128ABC00771202 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
