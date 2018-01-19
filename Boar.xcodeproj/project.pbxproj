@@ -54,6 +54,7 @@
 		D00E603D20128ABC00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D00E604620128BBE00771202 /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* CoreDataContext.swift */; };
+		D00E60492012947800771202 /* tests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00E60472012947800771202 /* tests.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		D00E603720128ABC00771202 /* Boar_ReactiveCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveCoreDataTests.swift; sourceTree = "<group>"; };
 		D00E603920128ABC00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00E604520128BBE00771202 /* CoreDataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContext.swift; sourceTree = "<group>"; };
+		D00E60482012947800771202 /* tests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tests.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,10 +355,19 @@
 		D00E603620128ABB00771202 /* Boar-ReactiveCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				D00E604A201299CB00771202 /* Entity */,
 				D00E603720128ABC00771202 /* Boar_ReactiveCoreDataTests.swift */,
 				D00E603920128ABC00771202 /* Info.plist */,
+				D00E60472012947800771202 /* tests.xcdatamodeld */,
 			);
 			path = "Boar-ReactiveCoreDataTests";
+			sourceTree = "<group>";
+		};
+		D00E604A201299CB00771202 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00E603820128ABC00771202 /* Boar_ReactiveCoreDataTests.swift in Sources */,
+				D00E60492012947800771202 /* tests.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,6 +1194,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D00E60472012947800771202 /* tests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D00E60482012947800771202 /* tests.xcdatamodel */,
+			);
+			currentVersion = D00E60482012947800771202 /* tests.xcdatamodel */;
+			path = tests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D001ADA4200CF1C1006E8C36 /* Project object */;
 }
