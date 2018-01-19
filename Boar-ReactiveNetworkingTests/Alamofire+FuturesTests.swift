@@ -16,28 +16,35 @@ protocol Patchable {
     func patch(with: Dictionary<String, Any>) -> Self
 }
 
-struct G_H_Issue : ImmutableMappable {
+struct GH_Issue  {
+    let url: String
+}
+
+
+
+
+extension GH_Issue : ImmutableMappable{
     init(map: Map) throws {
-        url = try map.value("url")
+        url = (try? map.value("url")) ?? ""
     }
     
     func mapping(map: Map) {
         url >>> map["url"]
     }
-    let url: String
 }
 
 
 class AlamofireFuturesTests: XCTestCase {
     
     func testSimple(){
+        
         let issues = Alamofire
             .request("https://api.github.com/repos/killev/boar-ios/issues",
                      method: .get,
                      parameters: [:],
                      encoding: URLEncoding.default,
                      headers: Auth.basic(user: "killev", password: "CrossPlusPlus50000"))
-            .responseArray(G_H_Issue.self)
+            .responseArray(GH_Issue.self)
         
         XCTAssertFutureSuccess("testSimple", future: issues){ res in
             XCTAssertEqual(1, res.count)
