@@ -9,27 +9,115 @@
 import XCTest
 import Boar_ReactiveCoreData
 
+public extension UIApplication {
+    public static let documentsDirectory: URL = {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return urls[urls.count-1]
+    }()
+    
+    public static let libraryDirectory: URL = {
+        let urls = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
+        return urls[urls.count-1]
+    }()
+    
+    public static let temporaryDirectory: URL = {
+        return URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+    }()
+    
+    public static let cacheDirectory: URL = {
+        return libraryDirectory.appendingPathComponent("Caches", isDirectory: true).appendingPathComponent("com.coolcousin.cache", isDirectory: true)
+    }()
+}
+
+
 class Boar_ReactiveCoreDataTests: XCTestCase {
     
+    var context: CDContext!
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let bundle    = Bundle(for: Boar_ReactiveCoreDataTests.self)
+        let modelURL  = bundle.url(forResource: "tests", withExtension: "momd")!
+        let sqliteURL: URL = UIApplication.documentsDirectory.appendingPathComponent("Testl-\(UUID().uuidString).sqlite")
+        try? FileManager.default.removeItem(at: sqliteURL)
+        context = try! CDContext(modelURL, sqliteURL: sqliteURL)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        context.remove()
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    private func create(){
+        let add = context.perform {cxt in
+            return [self.context.create(TestEntity.self) {
+                $0.id = UUID()
+                $0.url = ""
+                }
+            ]
+        }
+        XCTAssertFutureSuccess("Shoul add 1 element", future: add)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testCreate() {
+        
+        create()
+        XCTAssertFutureSuccess("Should have 1 element", future: context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(1, res.count)
+        }
+    }
+    
+    func testCreateFail() {
+        
+        let future = context.perform {cxt in
+            return [self.context.create(TestEntity.self) {_ in
+                throw NSError(domain: "dom", code: 123, userInfo: nil)
+                }
+            ]
+        }
+        XCTAssertFutureFailure("Shouldn't add any elements", future: future)
+        
+        XCTAssertFutureSuccess("Shouldn't have any elements", future: context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(0, res.count)
+        }
+    }
+    
+    func testUpdate() {
+        
+        create()
+        let newUrl = "bla-bla"
+        
+        let update = context.findAll(TestEntity.self)
+            .flatMap{ res in
+                self.context.perform {
+                    [$0.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
+                }
+        }
+        
+        XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
+            XCTAssertEqual(1, res.updated.count)
+        }
+        XCTAssertFutureSuccess("Shouldn't have any elements", future: context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(1, res.count)
+            XCTAssertEqual(newUrl, res.first!.url)
+        }
+    }
+    
+    func testBatchUpdate() {
+        
+        create()
+        let newUrl = "bla-bla"
+        
+
+        let update = context.perform {
+            [$0.update(TestEntity.self, pred: NSPredicate(value: true) ){$0.url = newUrl}]
+        }
+        
+        XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
+            XCTAssertEqual(1, res.updated.count)
+        }
+        XCTAssertFutureSuccess("Shouldn't have any elements", future: context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(1, res.count)
+            XCTAssertEqual(newUrl, res.first!.url)
         }
     }
     

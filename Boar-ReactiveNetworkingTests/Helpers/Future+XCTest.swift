@@ -10,7 +10,7 @@ import XCTest
 import BrightFutures
 
 extension XCTestCase{
-    func XCTAssertFutureSuccess<V>(file: StaticString = #file, line: UInt = #line, _ message: String, timeout: TimeInterval = 10, future: @autoclosure () -> Future<V, NSError>, check:((V)->Void)?) {
+    func XCTAssertFutureSuccess<V>(file: StaticString = #file, line: UInt = #line, _ message: String, timeout: TimeInterval = 10, future: @autoclosure () -> Future<V, NSError>, check:((V)->Void)? = nil) {
         
         let token = InvalidationToken()
         
@@ -46,20 +46,20 @@ extension XCTestCase{
 //    }
 //
 //
-//    func XCTAssertFutureFailure<V>(_ message: String, timeout: TimeInterval, future: Future<V, NSError>){
-//        let token = InvalidationToken()
-//        let expectation = self.expectation(description: message + " - Expectation")
-//        future.onComplete(token.validContext){result in
-//            switch result {
-//            case .success(_): XCTFail(message + " - should fail ")
-//            case .failure(_): print(message + " - fails and that's correct!")
-//
-//            }
-//            expectation.fulfill()
-//
-//        }
-//        waitForExpectations(timeout: timeout, handler: nil)
-//        token.invalidate()
-//    }
+    func XCTAssertFutureFailure<V>(_ message: String, timeout: TimeInterval = 10, future: Future<V, NSError>){
+        let token = InvalidationToken()
+        let expectation = self.expectation(description: message + " - Expectation")
+        future.onComplete(token.validContext){result in
+            switch result {
+            case .success(_): XCTFail(message + " - should fail ")
+            case .failure(_): print(message + " - fails and that's correct!")
+
+            }
+            expectation.fulfill()
+
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
+        token.invalidate()
+    }
     
 }

@@ -47,14 +47,37 @@
 		D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D001AE22200D4044006E8C36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
-		D00E60222012868500771202 /* ImmutableOnjectMapper+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60212012868500771202 /* ImmutableOnjectMapper+defaults.swift */; };
+		D00E60222012868500771202 /* ImmutableMapper+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60212012868500771202 /* ImmutableMapper+defaults.swift */; };
 		D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603820128ABC00771202 /* Boar_ReactiveCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E603720128ABC00771202 /* Boar_ReactiveCoreDataTests.swift */; };
 		D00E603A20128ABC00771202 /* Boar_ReactiveCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00E603D20128ABC00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D00E604620128BBE00771202 /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* CoreDataContext.swift */; };
+		D00E604620128BBE00771202 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* Context.swift */; };
 		D00E60492012947800771202 /* tests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00E60472012947800771202 /* tests.xcdatamodeld */; };
+		D00E605820129CE600771202 /* TestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E605720129CE600771202 /* TestEntity.swift */; };
+		D00E605B2012A0EC00771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00E606A2012A40800771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
+		D00E60712012A40800771202 /* Boar_ReactiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60702012A40800771202 /* Boar_ReactiveTests.swift */; };
+		D00E60732012A40800771202 /* Boar_Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E60632012A40800771202 /* Boar_Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D00E60762012A40800771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
+		D00E60772012A40800771202 /* Boar_Reactive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D00E607F2012A42600771202 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E607E2012A42600771202 /* Reactive.swift */; };
+		D00E60802012A4EC00771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
+		D00E60832012A75200771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00E60842012A75200771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D00E60862012A76E00771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D00E60882012B83000771202 /* FetchedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* FetchedResult.swift */; };
+		D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
+		D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
+		D00E608B2012BA4A00771202 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
+		D00E608C2012BB1500771202 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
+		D00E608D2012BB1500771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00E608E2012BB3500771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D00E608F2012BB6F00771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00E60902012BB6F00771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D00E60912012BB6F00771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D00E60932012CC5400771202 /* Context+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* Context+Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +130,27 @@
 			remoteGlobalIDString = D00E602720128ABB00771202;
 			remoteInfo = "Boar-ReactiveCoreData";
 		};
+		D00E606B2012A40800771202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00E60602012A40800771202;
+			remoteInfo = "Boar-Reactive";
+		};
+		D00E606D2012A40800771202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D001ADAB200CF1C1006E8C36;
+			remoteInfo = Boar;
+		};
+		D00E60742012A40800771202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00E60602012A40800771202;
+			remoteInfo = "Boar-Reactive";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +162,7 @@
 			files = (
 				D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */,
 				D001AE02200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Embed Frameworks */,
+				D00E60772012A40800771202 /* Boar_Reactive.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,15 +204,26 @@
 		D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+FuturesTests.swift"; sourceTree = "<group>"; };
 		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
 		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
-		D00E60212012868500771202 /* ImmutableOnjectMapper+defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmutableOnjectMapper+defaults.swift"; sourceTree = "<group>"; };
+		D00E60212012868500771202 /* ImmutableMapper+defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmutableMapper+defaults.swift"; sourceTree = "<group>"; };
 		D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_ReactiveCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveCoreData.h; sourceTree = "<group>"; };
 		D00E602B20128ABB00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveCoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E603720128ABC00771202 /* Boar_ReactiveCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveCoreDataTests.swift; sourceTree = "<group>"; };
 		D00E603920128ABC00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D00E604520128BBE00771202 /* CoreDataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContext.swift; sourceTree = "<group>"; };
+		D00E604520128BBE00771202 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		D00E60482012947800771202 /* tests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tests.xcdatamodel; sourceTree = "<group>"; };
+		D00E605720129CE600771202 /* TestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEntity.swift; sourceTree = "<group>"; };
+		D00E60592012A0D800771202 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = SOURCE_ROOT; };
+		D00E60612012A40800771202 /* Boar_Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00E60632012A40800771202 /* Boar_Reactive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_Reactive.h; sourceTree = "<group>"; };
+		D00E60642012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00E60702012A40800771202 /* Boar_ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveTests.swift; sourceTree = "<group>"; };
+		D00E60722012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00E607E2012A42600771202 /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		D00E60872012B83000771202 /* FetchedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedResult.swift; sourceTree = "<group>"; };
+		D00E60922012CC5400771202 /* Context+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Context+Operations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +236,7 @@
 				D001ADDA200D2D92006E8C36 /* ReactiveKit.framework in Frameworks */,
 				D001ADDB200D2D92006E8C36 /* Result.framework in Frameworks */,
 				D001ADDC200D2D92006E8C36 /* ObjectMapper.framework in Frameworks */,
+				D00E60762012A40800771202 /* Boar_Reactive.framework in Frameworks */,
 				D001ADDD200D2D92006E8C36 /* Differ.framework in Frameworks */,
 				D001ADDE200D2D92006E8C36 /* Bond.framework in Frameworks */,
 				D001ADDF200D2D92006E8C36 /* AlamofireImage.framework in Frameworks */,
@@ -227,6 +284,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00E608B2012BA4A00771202 /* Bond.framework in Frameworks */,
+				D00E60802012A4EC00771202 /* Boar_Reactive.framework in Frameworks */,
+				D00E605B2012A0EC00771202 /* BrightFutures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +294,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00E608E2012BB3500771202 /* Result.framework in Frameworks */,
+				D00E608C2012BB1500771202 /* Bond.framework in Frameworks */,
+				D00E608D2012BB1500771202 /* BrightFutures.framework in Frameworks */,
 				D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E605D2012A40800771202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00E60862012A76E00771202 /* Result.framework in Frameworks */,
+				D00E60832012A75200771202 /* BrightFutures.framework in Frameworks */,
+				D00E60842012A75200771202 /* ReactiveKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E60662012A40800771202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00E608F2012BB6F00771202 /* BrightFutures.framework in Frameworks */,
+				D00E60902012BB6F00771202 /* ReactiveKit.framework in Frameworks */,
+				D00E60912012BB6F00771202 /* Result.framework in Frameworks */,
+				D00E606A2012A40800771202 /* Boar_Reactive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +334,8 @@
 				D001AE0C200D3338006E8C36 /* README.md */,
 				D001ADAE200CF1C1006E8C36 /* Boar */,
 				D001ADC3200CF1C1006E8C36 /* BoarTests */,
+				D00E60622012A40800771202 /* Boar-Reactive */,
+				D00E606F2012A40800771202 /* Boar-ReactiveTests */,
 				D001ADEC200D31E4006E8C36 /* Boar-ReactiveNetworking */,
 				D001ADF9200D31E4006E8C36 /* Boar-ReactiveNetworkingTests */,
 				D00E602920128ABB00771202 /* Boar-ReactiveCoreData */,
@@ -268,6 +354,8 @@
 				D001ADF3200D31E4006E8C36 /* Boar-ReactiveNetworkingTests.xctest */,
 				D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */,
 				D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */,
+				D00E60612012A40800771202 /* Boar_Reactive.framework */,
+				D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,6 +385,7 @@
 		D001ADCF200D2D74006E8C36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D00E60592012A0D800771202 /* iOS */,
 				D001ADD7200D2D92006E8C36 /* Alamofire.framework */,
 				D001ADD5200D2D92006E8C36 /* AlamofireImage.framework */,
 				D001ADD9200D2D92006E8C36 /* AlamofireNetworkActivityIndicator.framework */,
@@ -318,7 +407,7 @@
 				D001ADEE200D31E4006E8C36 /* Info.plist */,
 				D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */,
 				D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */,
-				D00E60212012868500771202 /* ImmutableOnjectMapper+defaults.swift */,
+				D00E60212012868500771202 /* ImmutableMapper+defaults.swift */,
 			);
 			path = "Boar-ReactiveNetworking";
 			sourceTree = "<group>";
@@ -347,7 +436,9 @@
 			children = (
 				D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */,
 				D00E602B20128ABB00771202 /* Info.plist */,
-				D00E604520128BBE00771202 /* CoreDataContext.swift */,
+				D00E604520128BBE00771202 /* Context.swift */,
+				D00E60872012B83000771202 /* FetchedResult.swift */,
+				D00E60922012CC5400771202 /* Context+Operations.swift */,
 			);
 			path = "Boar-ReactiveCoreData";
 			sourceTree = "<group>";
@@ -366,8 +457,28 @@
 		D00E604A201299CB00771202 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D00E605720129CE600771202 /* TestEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D00E60622012A40800771202 /* Boar-Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				D00E60632012A40800771202 /* Boar_Reactive.h */,
+				D00E60642012A40800771202 /* Info.plist */,
+				D00E607E2012A42600771202 /* Reactive.swift */,
+			);
+			path = "Boar-Reactive";
+			sourceTree = "<group>";
+		};
+		D00E606F2012A40800771202 /* Boar-ReactiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				D00E60702012A40800771202 /* Boar_ReactiveTests.swift */,
+				D00E60722012A40800771202 /* Info.plist */,
+			);
+			path = "Boar-ReactiveTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +500,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D00E605E2012A40800771202 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00E60732012A40800771202 /* Boar_Reactive.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -407,6 +526,7 @@
 			dependencies = (
 				D001ADFF200D31E4006E8C36 /* PBXTargetDependency */,
 				D00E603C20128ABC00771202 /* PBXTargetDependency */,
+				D00E60752012A40800771202 /* PBXTargetDependency */,
 			);
 			name = Boar;
 			productName = Boar;
@@ -505,6 +625,43 @@
 			productReference = D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D00E60602012A40800771202 /* Boar-Reactive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00E60782012A40800771202 /* Build configuration list for PBXNativeTarget "Boar-Reactive" */;
+			buildPhases = (
+				D00E605C2012A40800771202 /* Sources */,
+				D00E605D2012A40800771202 /* Frameworks */,
+				D00E605E2012A40800771202 /* Headers */,
+				D00E605F2012A40800771202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boar-Reactive";
+			productName = "Boar-Reactive";
+			productReference = D00E60612012A40800771202 /* Boar_Reactive.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D00E60682012A40800771202 /* Boar-ReactiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00E607B2012A40800771202 /* Build configuration list for PBXNativeTarget "Boar-ReactiveTests" */;
+			buildPhases = (
+				D00E60652012A40800771202 /* Sources */,
+				D00E60662012A40800771202 /* Frameworks */,
+				D00E60672012A40800771202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00E606C2012A40800771202 /* PBXTargetDependency */,
+				D00E606E2012A40800771202 /* PBXTargetDependency */,
+			);
+			name = "Boar-ReactiveTests";
+			productName = "Boar-ReactiveTests";
+			productReference = D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -544,6 +701,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = D001ADAB200CF1C1006E8C36;
 					};
+					D00E60602012A40800771202 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					D00E60682012A40800771202 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D001ADAB200CF1C1006E8C36;
+					};
 				};
 			};
 			buildConfigurationList = D001ADA7200CF1C1006E8C36 /* Build configuration list for PBXProject "Boar" */;
@@ -565,6 +732,8 @@
 				D001ADF2200D31E4006E8C36 /* Boar-ReactiveNetworkingTests */,
 				D00E602720128ABB00771202 /* Boar-ReactiveCoreData */,
 				D00E602F20128ABB00771202 /* Boar-ReactiveCoreDataTests */,
+				D00E60602012A40800771202 /* Boar-Reactive */,
+				D00E60682012A40800771202 /* Boar-ReactiveTests */,
 			);
 		};
 /* End PBXProject section */
@@ -613,6 +782,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D00E602E20128ABB00771202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E605F2012A40800771202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E60672012A40800771202 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -671,7 +854,7 @@
 			files = (
 				D001AE18200D3B88006E8C36 /* Alamofire+Auth.swift in Sources */,
 				D001AE12200D3381006E8C36 /* Alamofire+Futures.swift in Sources */,
-				D00E60222012868500771202 /* ImmutableOnjectMapper+defaults.swift in Sources */,
+				D00E60222012868500771202 /* ImmutableMapper+defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,7 +872,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00E604620128BBE00771202 /* CoreDataContext.swift in Sources */,
+				D00E604620128BBE00771202 /* Context.swift in Sources */,
+				D00E60932012CC5400771202 /* Context+Operations.swift in Sources */,
+				D00E60882012B83000771202 /* FetchedResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +884,25 @@
 			files = (
 				D00E603820128ABC00771202 /* Boar_ReactiveCoreDataTests.swift in Sources */,
 				D00E60492012947800771202 /* tests.xcdatamodeld in Sources */,
+				D00E605820129CE600771202 /* TestEntity.swift in Sources */,
+				D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E605C2012A40800771202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00E607F2012A42600771202 /* Reactive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00E60652012A40800771202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00E60712012A40800771202 /* Boar_ReactiveTests.swift in Sources */,
+				D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +943,21 @@
 			isa = PBXTargetDependency;
 			target = D00E602720128ABB00771202 /* Boar-ReactiveCoreData */;
 			targetProxy = D00E603B20128ABC00771202 /* PBXContainerItemProxy */;
+		};
+		D00E606C2012A40800771202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00E60602012A40800771202 /* Boar-Reactive */;
+			targetProxy = D00E606B2012A40800771202 /* PBXContainerItemProxy */;
+		};
+		D00E606E2012A40800771202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D001ADAB200CF1C1006E8C36 /* Boar */;
+			targetProxy = D00E606D2012A40800771202 /* PBXContainerItemProxy */;
+		};
+		D00E60752012A40800771202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00E60602012A40800771202 /* Boar-Reactive */;
+			targetProxy = D00E60742012A40800771202 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -963,6 +1182,7 @@
 				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveNetworking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -993,6 +1213,7 @@
 				);
 				INFOPLIST_FILE = "Boar-ReactiveNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveNetworking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1056,8 +1277,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveCoreData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveCoreData";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1082,8 +1308,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveCoreData/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveCoreData";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1101,6 +1332,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveCoreDataTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveCoreDataTests";
@@ -1117,9 +1352,116 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Boar-ReactiveCoreDataTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveCoreDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boar.app/Boar";
+			};
+			name = Release;
+		};
+		D00E60792012A40800771202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-Reactive/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-Reactive";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D00E607A2012A40800771202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-Reactive/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-Reactive";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D00E607C2012A40800771202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boar.app/Boar";
+			};
+			name = Debug;
+		};
+		D00E607D2012A40800771202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1189,6 +1531,24 @@
 			buildConfigurations = (
 				D00E604320128ABC00771202 /* Debug */,
 				D00E604420128ABC00771202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00E60782012A40800771202 /* Build configuration list for PBXNativeTarget "Boar-Reactive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00E60792012A40800771202 /* Debug */,
+				D00E607A2012A40800771202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00E607B2012A40800771202 /* Build configuration list for PBXNativeTarget "Boar-ReactiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00E607C2012A40800771202 /* Debug */,
+				D00E607D2012A40800771202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
