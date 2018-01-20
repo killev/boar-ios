@@ -12,48 +12,8 @@ import BrightFutures
 import Boar_Reactive
 
 
-extension Promise {
-    func materialize(_ f: (() throws -> T) ){
-        do {
-            success(try f())
-        }catch {
-            failure(error as! E)
-        }
-    }
-}
 
 
-extension NSManagedObjectContext{
-    
-    fileprivate func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
-        self.perform{
-            promise.materialize{ try block(self) }
-        }
-        return promise.future
-    }
-    
-    fileprivate func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
-        self.perform{
-            do  {
-                let res = try block(self)
-                try self.save()
-                promise.success(res)
-            } catch {
-                self.rollback()
-                promise.failure(error as NSError)
-            }
-        }
-        return promise.future
-    }
-    
-    fileprivate func sync<T>(_ block: @escaping (_ context:NSManagedObjectContext) -> T) -> T{
-        var res: T!
-        self.performAndWait{ res = block(self) }
-        return res
-    }
-}
 
 final public class CDContext {
     
@@ -102,9 +62,9 @@ final public class CDContext {
         public let deleted: Set<NSManagedObject>
     }
     @discardableResult
-    public func perform(operations: @escaping (CDContext) throws ->[Operation] ) -> Future<CDContext.ChangedContext, NSError>{
+    public func perform(operations: @escaping () ->[Operation] ) -> Future<CDContext.ChangedContext, NSError>{
         return сoordinatorContext.transaction{context -> CDContext.ChangedContext in
-            try operations(self).forEach{ try $0(context) }
+            try operations().forEach{ try $0(context) }
             return ChangedContext(inserted: context.insertedObjects,
                                   updated: context.updatedObjects,
                                   deleted: context.deletedObjects)
@@ -115,6 +75,12 @@ final public class CDContext {
         return backgroundContext.async{ context in
             return try context.find(type, pred: pred, order: order, count: count)
         }
+    }
+}
+
+public extension CDContext {
+    func fetch<T:NSManagedObject>(_ type: T.Type, initial: NSPredicate, order: [(String,Bool)]) -> CDFetched<String, T> {
+        return CDFetched(parent: сoordinatorContext,initial: initial, order: order)
     }
 }
 

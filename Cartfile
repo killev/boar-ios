@@ -10,3 +10,6 @@ github "Alamofire/AlamofireNetworkActivityIndicator"
 
 # Context and DI
 github "Swinject/Swinject-CodeGeneration"
+
+#Data
+github "realm/realm-cocoa"

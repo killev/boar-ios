@@ -24,7 +24,8 @@ extension XCTestCase{
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: timeout, handler: nil)
+        self.wait(for: [expectation], timeout: timeout)
+
         token.invalidate()
     }
     
@@ -58,7 +59,7 @@ extension XCTestCase{
             expectation.fulfill()
 
         }
-        waitForExpectations(timeout: timeout, handler: nil)
+        self.wait(for: [expectation], timeout: timeout)
         token.invalidate()
     }
     

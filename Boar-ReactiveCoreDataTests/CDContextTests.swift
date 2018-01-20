@@ -25,17 +25,17 @@ public extension UIApplication {
     }()
     
     public static let cacheDirectory: URL = {
-        return libraryDirectory.appendingPathComponent("Caches", isDirectory: true).appendingPathComponent("com.coolcousin.cache", isDirectory: true)
+        return libraryDirectory.appendingPathComponent("Caches", isDirectory: true).appendingPathComponent("com.boar.cache", isDirectory: true)
     }()
 }
 
 
-class Boar_ReactiveCoreDataTests: XCTestCase {
+class CDContextTests: XCTestCase {
     
     var context: CDContext!
     override func setUp() {
         super.setUp()
-        let bundle    = Bundle(for: Boar_ReactiveCoreDataTests.self)
+        let bundle    = Bundle(for: CDContextTests.self)
         let modelURL  = bundle.url(forResource: "tests", withExtension: "momd")!
         let sqliteURL: URL = UIApplication.documentsDirectory.appendingPathComponent("Testl-\(UUID().uuidString).sqlite")
         try? FileManager.default.removeItem(at: sqliteURL)
@@ -48,14 +48,14 @@ class Boar_ReactiveCoreDataTests: XCTestCase {
     }
     
     private func create(){
-        let add = context.perform {cxt in
-            return [self.context.create(TestEntity.self) {
+        let add = context.perform {
+            return [CDContext.create(TestEntity.self) {
                 $0.id = UUID()
                 $0.url = ""
                 }
             ]
         }
-        XCTAssertFutureSuccess("Shoul add 1 element", future: add)
+        XCTAssertFutureSuccess("Should add 1 element", future: add)
     }
     
     func testCreate() {
@@ -68,8 +68,8 @@ class Boar_ReactiveCoreDataTests: XCTestCase {
     
     func testCreateFail() {
         
-        let future = context.perform {cxt in
-            return [self.context.create(TestEntity.self) {_ in
+        let future = context.perform {
+            return [CDContext.create(TestEntity.self) {_ in
                 throw NSError(domain: "dom", code: 123, userInfo: nil)
                 }
             ]
@@ -89,7 +89,7 @@ class Boar_ReactiveCoreDataTests: XCTestCase {
         let update = context.findAll(TestEntity.self)
             .flatMap{ res in
                 self.context.perform {
-                    [$0.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
+                    [CDContext.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
                 }
         }
         
@@ -109,7 +109,7 @@ class Boar_ReactiveCoreDataTests: XCTestCase {
         
 
         let update = context.perform {
-            [$0.update(TestEntity.self, pred: NSPredicate(value: true) ){$0.url = newUrl}]
+            [CDContext.update(TestEntity.self, pred: NSPredicate(value: true) ){$0.url = newUrl}]
         }
         
         XCTAssertFutureSuccess("Should update 1 element", future: update){ res in

@@ -244,3 +244,13 @@ public extension DispatchQueue{
     }
 }
 
+public extension Promise {
+    func materialize(from f: (() throws -> T) ){
+        do {
+            success(try f())
+        }catch {
+            failure(error as! E)
+        }
+    }
+}
+
