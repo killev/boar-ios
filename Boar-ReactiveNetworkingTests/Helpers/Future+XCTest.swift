@@ -14,10 +14,10 @@ extension XCTestCase{
         
         let token = InvalidationToken()
         
-        let expectation = self.expectation(description: message + " - Expectation")
+        let expectation = self.expectation(description: message + UUID().uuidString + " - Expectation")
         future().onComplete(token.validContext){result in
             switch result {
-            case .success(let value): print (message, " - Success"); check?(value); break
+            case .success(let value): check?(value); break
             case .failure(let error): XCTFail(message + " - raises error: " + error.localizedDescription, file: file, line: line)
                 
             }

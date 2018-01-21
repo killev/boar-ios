@@ -48,6 +48,7 @@
 		D001AE22200D4044006E8C36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */; };
+		D00AF75C2013D42F001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00E60222012868500771202 /* ImmutableMapper+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60212012868500771202 /* ImmutableMapper+defaults.swift */; };
 		D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603820128ABC00771202 /* CDContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E603720128ABC00771202 /* CDContextTests.swift */; };
@@ -68,7 +69,7 @@
 		D00E60832012A75200771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
 		D00E60842012A75200771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D00E60862012A76E00771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
-		D00E60882012B83000771202 /* CDFetched.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* CDFetched.swift */; };
+		D00E60882012B83000771202 /* CDFetchedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* CDFetchedObservable.swift */; };
 		D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E608B2012BA4A00771202 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
@@ -226,7 +227,7 @@
 		D00E60702012A40800771202 /* Boar_ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveTests.swift; sourceTree = "<group>"; };
 		D00E60722012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00E607E2012A42600771202 /* Reactive.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D00E60872012B83000771202 /* CDFetched.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CDFetched.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D00E60872012B83000771202 /* CDFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CDFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D00E60922012CC5400771202 /* CDContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContext+Operations.swift"; sourceTree = "<group>"; };
 		D00E6096201353F300771202 /* CDContextFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextFetchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00AF75C2013D42F001B65D9 /* Result.framework in Frameworks */,
 				D00E608B2012BA4A00771202 /* Bond.framework in Frameworks */,
 				D00E60802012A4EC00771202 /* Boar_Reactive.framework in Frameworks */,
 				D00E605B2012A0EC00771202 /* BrightFutures.framework in Frameworks */,
@@ -349,9 +351,9 @@
 				D001ADAD200CF1C1006E8C36 /* Products */,
 				D001ADCF200D2D74006E8C36 /* Frameworks */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		D001ADAD200CF1C1006E8C36 /* Products */ = {
 			isa = PBXGroup;
@@ -365,8 +367,10 @@
 				D00E60612012A40800771202 /* Boar_Reactive.framework */,
 				D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */,
 			);
+			indentWidth = 4;
 			name = Products;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D001ADAE200CF1C1006E8C36 /* Boar */ = {
 			isa = PBXGroup;
@@ -378,8 +382,10 @@
 				D001ADB8200CF1C1006E8C36 /* LaunchScreen.storyboard */,
 				D001ADBB200CF1C1006E8C36 /* Info.plist */,
 			);
+			indentWidth = 4;
 			path = Boar;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D001ADC3200CF1C1006E8C36 /* BoarTests */ = {
 			isa = PBXGroup;
@@ -387,8 +393,10 @@
 				D001ADC4200CF1C1006E8C36 /* BoarTests.swift */,
 				D001ADC6200CF1C1006E8C36 /* Info.plist */,
 			);
+			indentWidth = 4;
 			path = BoarTests;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D001ADCF200D2D74006E8C36 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -405,8 +413,10 @@
 				D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */,
 				D001ADD1200D2D92006E8C36 /* Result.framework */,
 			);
+			indentWidth = 4;
 			path = Frameworks;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D001ADEC200D31E4006E8C36 /* Boar-ReactiveNetworking */ = {
 			isa = PBXGroup;
@@ -430,10 +440,10 @@
 				D001ADFC200D31E4006E8C36 /* Info.plist */,
 				D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			path = "Boar-ReactiveNetworkingTests";
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		D001AE23200D41DF006E8C36 /* Helpers */ = {
 			isa = PBXGroup;
@@ -450,13 +460,13 @@
 				D00E602B20128ABB00771202 /* Info.plist */,
 				D00E604520128BBE00771202 /* CDContext.swift */,
 				D00E60922012CC5400771202 /* CDContext+Operations.swift */,
-				D00E60872012B83000771202 /* CDFetched.swift */,
+				D00E60872012B83000771202 /* CDFetchedObservable.swift */,
 				D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			path = "Boar-ReactiveCoreData";
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		D00E603620128ABB00771202 /* Boar-ReactiveCoreDataTests */ = {
 			isa = PBXGroup;
@@ -467,8 +477,10 @@
 				D00E603920128ABC00771202 /* Info.plist */,
 				D00E60472012947800771202 /* tests.xcdatamodeld */,
 			);
+			indentWidth = 4;
 			path = "Boar-ReactiveCoreDataTests";
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D00E604A201299CB00771202 /* Entity */ = {
 			isa = PBXGroup;
@@ -485,8 +497,10 @@
 				D00E60642012A40800771202 /* Info.plist */,
 				D00E607E2012A42600771202 /* Reactive.swift */,
 			);
+			indentWidth = 4;
 			path = "Boar-Reactive";
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		D00E606F2012A40800771202 /* Boar-ReactiveTests */ = {
 			isa = PBXGroup;
@@ -893,7 +907,7 @@
 				D00E604620128BBE00771202 /* CDContext.swift in Sources */,
 				D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */,
 				D00E60932012CC5400771202 /* CDContext+Operations.swift in Sources */,
-				D00E60882012B83000771202 /* CDFetched.swift in Sources */,
+				D00E60882012B83000771202 /* CDFetchedObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

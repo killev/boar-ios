@@ -10,6 +10,7 @@ import Foundation
 import Boar_ReactiveCoreData
 import XCTest
 import Bond
+import ReactiveKit
 
 class CDContextFetchTests: XCTestCase {
     
@@ -29,45 +30,42 @@ class CDContextFetchTests: XCTestCase {
         super.tearDown()
     }
     
-    private func create(){
+    private func create() {
         print("starting adding")
         let add = context.perform {
             return [CDContext.create(TestEntity.self) {
                 $0.id = UUID()
                 $0.url = ""
-                }
+            }
             ]
         }
         XCTAssertFutureSuccess("Should add 1 element", future: add)
     }
     
-  
-    
     func testFetch() {
         let expectation = self.expectation(description: "testFetch - Expectation")
         create()
-        let obs = context.fetch(TestEntity.self, initial: NSPredicate(value: true), order: [("id", true)])
+        
+        
+        let obs = context.fetch(TestEntity.self, initial: NSPredicate(value: true), order: [("url", true)])
+        
         var p:Int = 0
-        obs.observeNext{ event in
-            p += 1
-            if p == 5{
-               expectation.fulfill()
-            }
+        obs.observeIn(.immediateOnMain).observeNext{ event in
+            print(event.change, event.source.count, Thread.isMainThread)
+            Thread.sleep(forTimeInterval: 0.01)
         }.dispose(in: reactive.bag)
         
-        
-        
-        let arr = Observable2DArray<String, TestEntity>()
-            
-        
-        arr.bind(to: <#T##UICollectionView#>, createCell: <#T##CollectionViewBond#>)
- 
-        create()
-        let newUrl = "bla-bla"
-        
+        for _ in 0...500{
+            create()
+        }
+        //
+        //    let collection = UICollectionView()
+        //    obs.bind(to: collection) { dataSource, indexPath, collectioView -> UICollectionViewCell in
+        //        return UICollectionViewCell()
+        //    }
         
         let update = context.perform {
-            [CDContext.update(TestEntity.self, pred: NSPredicate(value: true) ){$0.url = newUrl}]
+            [CDContext.update(TestEntity.self, pred: NSPredicate(value: true) ){ $0.url = UUID().uuidString} ]
         }
         XCTAssertFutureSuccess("Should update 2 element", future: update)
         waitForExpectations(timeout: 30, handler: nil)

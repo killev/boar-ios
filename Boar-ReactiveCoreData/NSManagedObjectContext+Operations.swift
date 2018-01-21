@@ -10,34 +10,38 @@ import CoreData
 import BrightFutures
 
 extension NSManagedObjectContext {
-    
-    @discardableResult
-    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
-        self.perform{
-            promise.materialize{ try block(self) }
-        }
-        return promise.future
+  
+  //@discardableResult
+  func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
+    let promise = Promise<T, NSError>()
+    self.perform{
+      promise.materialize{ try block(self) }
     }
-    
-    func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
-        self.perform{
-            do  {
-                let res = try block(self)
-                try self.save()
-                promise.success(res)
-            } catch {
-                self.rollback()
-                promise.failure(error as NSError)
-            }
-        }
-        return promise.future
+    return promise.future
+  }
+  
+  func async(_ block: @escaping (_ context:NSManagedObjectContext) -> Void) {
+    self.perform{ block(self) }
+  }
+ 
+  func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
+    let promise = Promise<T, NSError>()
+    self.perform{
+      do  {
+        let res = try block(self)
+        try self.save()
+        promise.success(res)
+      } catch {
+        self.rollback()
+        promise.failure(error as NSError)
+      }
     }
-    
-    func sync<T>(_ block: @escaping (_ context:NSManagedObjectContext) -> T) -> T{
-        var res: T!
-        self.performAndWait{ res = block(self) }
-        return res
-    }
+    return promise.future
+  }
+
+  func sync<T>(_ block: (_ context:NSManagedObjectContext) -> T) -> T{
+    var res: T!
+    self.performAndWait{ res = block(self) }
+    return res
+  }
 }

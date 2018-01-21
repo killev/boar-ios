@@ -1,5 +1,6 @@
 # Reactive
-github "ReactiveKit/Bond"
+
+git "file:///Users/Peter/Work/Bond" "master"
 github "Thomvis/BrightFutures"
 
 # Networking
