@@ -65,22 +65,53 @@ final public class CDContext {
                                   deleted: context.deletedObjects)
         }
     }
-    
-    
-//    @discardableResult
-//    public func perform(operations: @escaping () -> [Operation], confirm: ()->Future<Bool, NSError> ) -> Future<CDContext.ChangedContext, NSError>{
-//        return сoordinatorContext.transaction{ context in
-//            
-//        }
-//    }
-    
-    
+
     public func find<T:NSManagedObject>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T], NSError> {
         return backgroundContext.async{ context in
             return try context.find(type, pred: pred, order: order, count: count)
         }
     }
 }
+//Senseless stuff :)
+public extension CDContext {
+    public struct ChangedContextTransact {
+        public let inserted: Set<NSManagedObject>
+        public let updated: Set<NSManagedObject>
+        public let deleted: Set<NSManagedObject>
+        fileprivate let transact: NSManagedObjectContext
+        public func confirm()-> Future<Void, NSError>{
+            return transact.async{ ctx in
+                try ctx.save()
+            }
+        }
+        public func rollback()->Future<Void, NSError>{
+            return transact.async{ ctx in
+                print (ctx.updatedObjects.count)
+                ctx.rollback()
+                try ctx.save()
+                try ctx.parent?.save()
+            }
+        }
+    }
+
+
+    //    @discardableResult
+    public func performConfirm(operations: @escaping () -> [Operation]) -> Future<CDContext.ChangedContextTransact, NSError>{
+        return сoordinatorContext.transaction{ context in
+            let transact = context.create(merge: false)
+            let oper = operations()
+            try transact.sync { contex in
+                try oper.forEach{ try $0(context) }
+            }
+            try oper.forEach{ try $0(context) }
+            return ChangedContextTransact(inserted: context.insertedObjects,
+                                          updated: context.updatedObjects,
+                                          deleted: context.deletedObjects,
+                                          transact: transact)
+        }
+    }
+}
+
 
 public extension CDContext {
     func fetch<T:NSManagedObject>(_ type: T.Type, initial: NSPredicate, order: [(String,Bool)]) -> CDFetchedObservable<T> {

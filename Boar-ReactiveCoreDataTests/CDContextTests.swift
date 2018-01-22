@@ -102,6 +102,33 @@ class CDContextTests: XCTestCase {
         }
     }
     
+    func testUpdateConfirm() {
+        
+        create()
+        let newUrl = "bla-bla"
+        
+        let update = context.findAll(TestEntity.self)
+            .flatMap{ res in
+                self.context.performConfirm {
+                    [CDContext.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
+                }
+        }
+        
+        
+        XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
+            XCTAssertEqual(1, res.updated.count)
+        }
+        let rollback = update.flatMap{ $0.rollback() }
+        
+      
+        XCTAssertFutureSuccess("Should rollback all element", future: rollback)
+        XCTAssertFutureSuccess("All elements should have ",
+                               future: context.findAll(TestEntity.self)) { res in
+            XCTAssertEqual(1, res.count)
+            XCTAssertEqual("", res.first!.url)
+        }
+    }
+    
     func testBatchUpdate() {
         
         create()

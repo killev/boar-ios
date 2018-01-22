@@ -40,7 +40,8 @@ public extension CDContext {
     
     static func delete<T: NSManagedObject>(_ type: T.Type, obj: T) -> Operation {
         return { (context: NSManagedObjectContext) in
-            context.delete(obj)
+            let entity = obj.managedObjectContext == context ? obj : try context.existingObject(with: obj.objectID) as! T
+            context.delete(entity)
         }
     }
 }

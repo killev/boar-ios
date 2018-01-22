@@ -8,10 +8,11 @@
 
 import CoreData
 import BrightFutures
+import Result
 
 extension NSManagedObjectContext {
     
-    //@discardableResult
+    @discardableResult
     func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
         let promise = Promise<T, NSError>()
         self.perform{
@@ -20,9 +21,16 @@ extension NSManagedObjectContext {
         return promise.future
     }
     
-    func async(_ block: @escaping (_ context:NSManagedObjectContext) -> Void) {
-        self.perform{ block(self) }
+    @discardableResult
+    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) -> Future<T, NSError>) -> Future<T, NSError> {
+        let promise = Promise<T, NSError>()
+        self.perform{
+            promise.completeWith( block(self) )
+        }
+        return promise.future
     }
+    
+    @discardableResult
     func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
         return self.async{ context in
             do  {
@@ -35,11 +43,28 @@ extension NSManagedObjectContext {
             }
         }
     }
-        
     
-    func sync<T>(_ block: (_ context:NSManagedObjectContext) -> T) -> T{
+    @discardableResult
+    func sync<T>(_ block: (_ context:NSManagedObjectContext) -> T)  -> T{
         var res: T!
-        self.performAndWait{ res = block(self) }
+        self.performAndWait{
+            res = block(self)
+        }
         return res
+    }
+    
+    
+    @discardableResult
+    func sync<T>(_ block: (_ context:NSManagedObjectContext) throws -> T) throws -> T{
+        var res: Result<T,NSError>!
+        self.performAndWait{
+            res = Result<T,NSError>(attempt: { try block(self)} )
+        }
+        if let val = res.value {
+            return val
+        }
+        else {
+            throw res.error!
+        }
     }
 }

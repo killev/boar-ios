@@ -45,10 +45,10 @@ class CDContextFetchTests: XCTestCase {
         let expectation = self.expectation(description: "testFetch - Expectation")
         create()
       
-        let obs = context.fetch(TestEntity.self, initial: NSPredicate(value: true), order: [("url", true)])
-        
+        let observable = context.fetch(TestEntity.self, initial: NSPredicate(value: true), order: [("url", true)])
+    
         var count = 0
-        obs.observeIn(.immediateOnMain).observeNext{ event in
+        observable.observeIn(.immediateOnMain).observeNext{ event in
             count += 1
             print(event.change, event.source.count, Thread.isMainThread, count)
             Thread.sleep(forTimeInterval: 0.01)
