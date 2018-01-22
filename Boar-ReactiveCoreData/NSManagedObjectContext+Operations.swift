@@ -10,38 +10,36 @@ import CoreData
 import BrightFutures
 
 extension NSManagedObjectContext {
-  
-  //@discardableResult
-  func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-    let promise = Promise<T, NSError>()
-    self.perform{
-      promise.materialize{ try block(self) }
+    
+    //@discardableResult
+    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
+        let promise = Promise<T, NSError>()
+        self.perform{
+            promise.materialize{ try block(self) }
+        }
+        return promise.future
     }
-    return promise.future
-  }
-  
-  func async(_ block: @escaping (_ context:NSManagedObjectContext) -> Void) {
-    self.perform{ block(self) }
-  }
- 
-  func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-    let promise = Promise<T, NSError>()
-    self.perform{
-      do  {
-        let res = try block(self)
-        try self.save()
-        promise.success(res)
-      } catch {
-        self.rollback()
-        promise.failure(error as NSError)
-      }
+    
+    func async(_ block: @escaping (_ context:NSManagedObjectContext) -> Void) {
+        self.perform{ block(self) }
     }
-    return promise.future
-  }
-
-  func sync<T>(_ block: (_ context:NSManagedObjectContext) -> T) -> T{
-    var res: T!
-    self.performAndWait{ res = block(self) }
-    return res
-  }
+    func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
+        return self.async{ context in
+            do  {
+                let res = try block(context)
+                try context.save()
+                return res
+            } catch {
+                context.rollback()
+                throw error
+            }
+        }
+    }
+        
+    
+    func sync<T>(_ block: (_ context:NSManagedObjectContext) -> T) -> T{
+        var res: T!
+        self.performAndWait{ res = block(self) }
+        return res
+    }
 }

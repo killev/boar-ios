@@ -1,4 +1,4 @@
-git "file:///Users/Peter/Work/Bond" "c030bca0d751d62a311eefba769edc2ab48fd63c"
+git "file:///Users/Peter/Work/Bond" "8ab0ad4985bef83b66603e5c930a7af92f5ebf00"
 github "Alamofire/Alamofire" "4.6.0"
 github "Alamofire/AlamofireImage" "3.3.0"
 github "Alamofire/AlamofireNetworkActivityIndicator" "2.2.0"

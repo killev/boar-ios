@@ -13,7 +13,7 @@ public extension CDContext {
     static func update<T:NSManagedObject>(_ type: T.Type, obj: T, update: @escaping (T) throws -> Void)-> Operation {
         
         return { (context: NSManagedObjectContext) in
-            let entity = try context.existingObject(with: obj.objectID) as! T
+            let entity = obj.managedObjectContext == context ? obj : try context.existingObject(with: obj.objectID) as! T
             try update(entity)
         }
     }
