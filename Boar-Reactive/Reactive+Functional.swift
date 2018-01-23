@@ -123,12 +123,13 @@ public extension Future {
     
     var sig: Signal<T, E> {
         return Signal { observer in
-            self.onSuccess(callback: observer.next)
+            self.onSuccess(callback: observer.completed)
             self.onFailure(callback: observer.failed)
             return observer.disposable
         }
     }
 }
+
 public extension Future {
     func with<U: AnyObject>(weak obj: U) -> Future<(T,U), E> {
         let res = Promise<(T, U), Value.Error>()

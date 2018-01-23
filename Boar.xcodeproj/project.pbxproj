@@ -49,6 +49,27 @@
 		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */; };
 		D00AF75C2013D42F001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D00AF77520169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */; };
+		D00AF77C20169552001B65D9 /* UIViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */; };
+		D00AF77E20169552001B65D9 /* Boar_ReactiveIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D00AF78120169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */; };
+		D00AF78220169552001B65D9 /* Boar_ReactiveIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D00AF78A2016956B001B65D9 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF7892016956B001B65D9 /* VM.swift */; };
+		D00AF78D20169594001B65D9 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF78C20169594001B65D9 /* UICollectionView.swift */; };
+		D00AF78E20169D88001B65D9 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
+		D00AF78F20169D88001B65D9 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00AF79020169D88001B65D9 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D00AF79120169D88001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
+		D00AF793201773FD001B65D9 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF792201773FD001B65D9 /* UICollectionViewCell.swift */; };
+		D00AF79620177854001B65D9 /* CellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF79520177854001B65D9 /* CellVM.swift */; };
+		D00AF79920177B48001B65D9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF79820177B48001B65D9 /* UIViewController.swift */; };
+		D00AF79E2017CF67001B65D9 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF79D2017CF67001B65D9 /* UIStoryboard.swift */; };
+		D00AF7A02017CFA7001B65D9 /* UIViewController+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF79F2017CFA7001B65D9 /* UIViewController+Routing.swift */; };
+		D00AF7A22017CFFA001B65D9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF7A12017CFFA001B65D9 /* Router.swift */; };
+		D00AF7A32017D312001B65D9 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
+		D00AF7A42017D312001B65D9 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
+		D00AF7A52017D312001B65D9 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D00AF7A62017D312001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00E60222012868500771202 /* ImmutableMapper+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60212012868500771202 /* ImmutableMapper+defaults.swift */; };
 		D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603820128ABC00771202 /* CDContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E603720128ABC00771202 /* CDContextTests.swift */; };
@@ -64,7 +85,7 @@
 		D00E60732012A40800771202 /* Boar_Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E60632012A40800771202 /* Boar_Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00E60762012A40800771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
 		D00E60772012A40800771202 /* Boar_Reactive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D00E607F2012A42600771202 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E607E2012A42600771202 /* Reactive.swift */; };
+		D00E607F2012A42600771202 /* Reactive+Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E607E2012A42600771202 /* Reactive+Functional.swift */; };
 		D00E60802012A4EC00771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
 		D00E60832012A75200771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
 		D00E60842012A75200771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
@@ -112,6 +133,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = D001ADEA200D31E4006E8C36;
 			remoteInfo = "Boar-ReactiveNetworking";
+		};
+		D00AF77620169552001B65D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00AF76B20169552001B65D9;
+			remoteInfo = "Boar-ReactiveIOS";
+		};
+		D00AF77820169552001B65D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D001ADAB200CF1C1006E8C36;
+			remoteInfo = Boar;
+		};
+		D00AF77F20169552001B65D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00AF76B20169552001B65D9;
+			remoteInfo = "Boar-ReactiveIOS";
 		};
 		D00E603220128ABB00771202 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -167,6 +209,7 @@
 				D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */,
 				D001AE02200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Embed Frameworks */,
 				D00E60772012A40800771202 /* Boar_Reactive.framework in Embed Frameworks */,
+				D00AF78220169552001B65D9 /* Boar_ReactiveIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +252,20 @@
 		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
 		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
 		D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Operations.swift"; sourceTree = "<group>"; };
+		D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_ReactiveIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveIOS.h; sourceTree = "<group>"; };
+		D00AF76F20169552001B65D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00AF77420169552001B65D9 /* Boar-ReactiveIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveIOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTests.swift; sourceTree = "<group>"; };
+		D00AF77D20169552001B65D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00AF7892016956B001B65D9 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
+		D00AF78C20169594001B65D9 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		D00AF792201773FD001B65D9 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		D00AF79520177854001B65D9 /* CellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVM.swift; sourceTree = "<group>"; };
+		D00AF79820177B48001B65D9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D00AF79D2017CF67001B65D9 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		D00AF79F2017CFA7001B65D9 /* UIViewController+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Routing.swift"; sourceTree = "<group>"; };
+		D00AF7A12017CFFA001B65D9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D00E60212012868500771202 /* ImmutableMapper+defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmutableMapper+defaults.swift"; sourceTree = "<group>"; };
 		D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_ReactiveCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveCoreData.h; sourceTree = "<group>"; };
@@ -226,7 +283,7 @@
 		D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E60702012A40800771202 /* Boar_ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveTests.swift; sourceTree = "<group>"; };
 		D00E60722012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D00E607E2012A42600771202 /* Reactive.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D00E607E2012A42600771202 /* Reactive+Functional.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Reactive+Functional.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		D00E60872012B83000771202 /* CDFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CDFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D00E60922012CC5400771202 /* CDContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContext+Operations.swift"; sourceTree = "<group>"; };
 		D00E6096201353F300771202 /* CDContextFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextFetchTests.swift; sourceTree = "<group>"; };
@@ -244,6 +301,7 @@
 				D001ADDC200D2D92006E8C36 /* ObjectMapper.framework in Frameworks */,
 				D00E60762012A40800771202 /* Boar_Reactive.framework in Frameworks */,
 				D001ADDD200D2D92006E8C36 /* Differ.framework in Frameworks */,
+				D00AF78120169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */,
 				D001ADDE200D2D92006E8C36 /* Bond.framework in Frameworks */,
 				D001ADDF200D2D92006E8C36 /* AlamofireImage.framework in Frameworks */,
 				D001ADE0200D2D92006E8C36 /* BrightFutures.framework in Frameworks */,
@@ -283,6 +341,29 @@
 				D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */,
 				D001AE22200D4044006E8C36 /* Result.framework in Frameworks */,
 				D001ADF4200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF76820169552001B65D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00AF78E20169D88001B65D9 /* Bond.framework in Frameworks */,
+				D00AF78F20169D88001B65D9 /* BrightFutures.framework in Frameworks */,
+				D00AF79020169D88001B65D9 /* ReactiveKit.framework in Frameworks */,
+				D00AF79120169D88001B65D9 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF77120169552001B65D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00AF7A32017D312001B65D9 /* Bond.framework in Frameworks */,
+				D00AF7A42017D312001B65D9 /* BrightFutures.framework in Frameworks */,
+				D00AF7A52017D312001B65D9 /* ReactiveKit.framework in Frameworks */,
+				D00AF7A62017D312001B65D9 /* Result.framework in Frameworks */,
+				D00AF77520169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +429,8 @@
 				D001ADF9200D31E4006E8C36 /* Boar-ReactiveNetworkingTests */,
 				D00E602920128ABB00771202 /* Boar-ReactiveCoreData */,
 				D00E603620128ABB00771202 /* Boar-ReactiveCoreDataTests */,
+				D00AF76D20169552001B65D9 /* Boar-ReactiveIOS */,
+				D00AF77A20169552001B65D9 /* Boar-ReactiveIOSTests */,
 				D001ADAD200CF1C1006E8C36 /* Products */,
 				D001ADCF200D2D74006E8C36 /* Frameworks */,
 			);
@@ -366,6 +449,8 @@
 				D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */,
 				D00E60612012A40800771202 /* Boar_Reactive.framework */,
 				D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */,
+				D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */,
+				D00AF77420169552001B65D9 /* Boar-ReactiveIOSTests.xctest */,
 			);
 			indentWidth = 4;
 			name = Products;
@@ -453,6 +538,64 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D00AF76D20169552001B65D9 /* Boar-ReactiveIOS */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF79C2017CF54001B65D9 /* Router */,
+				D00AF79720177B2A001B65D9 /* Controllers */,
+				D00AF79420177833001B65D9 /* Collections */,
+				D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */,
+				D00AF76F20169552001B65D9 /* Info.plist */,
+				D00AF7892016956B001B65D9 /* VM.swift */,
+			);
+			path = "Boar-ReactiveIOS";
+			sourceTree = "<group>";
+		};
+		D00AF77A20169552001B65D9 /* Boar-ReactiveIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */,
+				D00AF77D20169552001B65D9 /* Info.plist */,
+			);
+			path = "Boar-ReactiveIOSTests";
+			sourceTree = "<group>";
+		};
+		D00AF78B20169583001B65D9 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF78C20169594001B65D9 /* UICollectionView.swift */,
+				D00AF792201773FD001B65D9 /* UICollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D00AF79420177833001B65D9 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF79520177854001B65D9 /* CellVM.swift */,
+				D00AF78B20169583001B65D9 /* CollectionView */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		D00AF79720177B2A001B65D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF79820177B48001B65D9 /* UIViewController.swift */,
+				D00AF79D2017CF67001B65D9 /* UIStoryboard.swift */,
+				D00AF79F2017CFA7001B65D9 /* UIViewController+Routing.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D00AF79C2017CF54001B65D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D00AF7A12017CFFA001B65D9 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		D00E602920128ABB00771202 /* Boar-ReactiveCoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,7 +638,7 @@
 			children = (
 				D00E60632012A40800771202 /* Boar_Reactive.h */,
 				D00E60642012A40800771202 /* Info.plist */,
-				D00E607E2012A42600771202 /* Reactive.swift */,
+				D00E607E2012A42600771202 /* Reactive+Functional.swift */,
 			);
 			indentWidth = 4;
 			path = "Boar-Reactive";
@@ -521,6 +664,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D001ADFD200D31E4006E8C36 /* Boar_ReactiveNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF76920169552001B65D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00AF77E20169552001B65D9 /* Boar_ReactiveIOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +710,7 @@
 				D001ADFF200D31E4006E8C36 /* PBXTargetDependency */,
 				D00E603C20128ABC00771202 /* PBXTargetDependency */,
 				D00E60752012A40800771202 /* PBXTargetDependency */,
+				D00AF78020169552001B65D9 /* PBXTargetDependency */,
 			);
 			name = Boar;
 			productName = Boar;
@@ -618,6 +770,43 @@
 			name = "Boar-ReactiveNetworkingTests";
 			productName = "Boar-ReactiveNetworkingTests";
 			productReference = D001ADF3200D31E4006E8C36 /* Boar-ReactiveNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D00AF76B20169552001B65D9 /* Boar-ReactiveIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00AF78320169552001B65D9 /* Build configuration list for PBXNativeTarget "Boar-ReactiveIOS" */;
+			buildPhases = (
+				D00AF76720169552001B65D9 /* Sources */,
+				D00AF76820169552001B65D9 /* Frameworks */,
+				D00AF76920169552001B65D9 /* Headers */,
+				D00AF76A20169552001B65D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boar-ReactiveIOS";
+			productName = "Boar-ReactiveIOS";
+			productReference = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D00AF77320169552001B65D9 /* Boar-ReactiveIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00AF78620169552001B65D9 /* Build configuration list for PBXNativeTarget "Boar-ReactiveIOSTests" */;
+			buildPhases = (
+				D00AF77020169552001B65D9 /* Sources */,
+				D00AF77120169552001B65D9 /* Frameworks */,
+				D00AF77220169552001B65D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00AF77720169552001B65D9 /* PBXTargetDependency */,
+				D00AF77920169552001B65D9 /* PBXTargetDependency */,
+			);
+			name = "Boar-ReactiveIOSTests";
+			productName = "Boar-ReactiveIOSTests";
+			productReference = D00AF77420169552001B65D9 /* Boar-ReactiveIOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D00E602720128ABB00771202 /* Boar-ReactiveCoreData */ = {
@@ -723,6 +912,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = D001ADAB200CF1C1006E8C36;
 					};
+					D00AF76B20169552001B65D9 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					D00AF77320169552001B65D9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D001ADAB200CF1C1006E8C36;
+					};
 					D00E602720128ABB00771202 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -766,6 +965,8 @@
 				D00E602F20128ABB00771202 /* Boar-ReactiveCoreDataTests */,
 				D00E60602012A40800771202 /* Boar-Reactive */,
 				D00E60682012A40800771202 /* Boar-ReactiveTests */,
+				D00AF76B20169552001B65D9 /* Boar-ReactiveIOS */,
+				D00AF77320169552001B65D9 /* Boar-ReactiveIOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -800,6 +1001,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D001ADF1200D31E4006E8C36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF76A20169552001B65D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF77220169552001B65D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -900,6 +1115,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D00AF76720169552001B65D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00AF7A22017CFFA001B65D9 /* Router.swift in Sources */,
+				D00AF79E2017CF67001B65D9 /* UIStoryboard.swift in Sources */,
+				D00AF78D20169594001B65D9 /* UICollectionView.swift in Sources */,
+				D00AF7A02017CFA7001B65D9 /* UIViewController+Routing.swift in Sources */,
+				D00AF793201773FD001B65D9 /* UICollectionViewCell.swift in Sources */,
+				D00AF79620177854001B65D9 /* CellVM.swift in Sources */,
+				D00AF78A2016956B001B65D9 /* VM.swift in Sources */,
+				D00AF79920177B48001B65D9 /* UIViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00AF77020169552001B65D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00AF77C20169552001B65D9 /* UIViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D00E602320128ABB00771202 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -927,7 +1165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00E607F2012A42600771202 /* Reactive.swift in Sources */,
+				D00E607F2012A42600771202 /* Reactive+Functional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +1200,21 @@
 			isa = PBXTargetDependency;
 			target = D001ADEA200D31E4006E8C36 /* Boar-ReactiveNetworking */;
 			targetProxy = D001ADFE200D31E4006E8C36 /* PBXContainerItemProxy */;
+		};
+		D00AF77720169552001B65D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00AF76B20169552001B65D9 /* Boar-ReactiveIOS */;
+			targetProxy = D00AF77620169552001B65D9 /* PBXContainerItemProxy */;
+		};
+		D00AF77920169552001B65D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D001ADAB200CF1C1006E8C36 /* Boar */;
+			targetProxy = D00AF77820169552001B65D9 /* PBXContainerItemProxy */;
+		};
+		D00AF78020169552001B65D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00AF76B20169552001B65D9 /* Boar-ReactiveIOS */;
+			targetProxy = D00AF77F20169552001B65D9 /* PBXContainerItemProxy */;
 		};
 		D00E603320128ABB00771202 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1299,6 +1552,105 @@
 			};
 			name = Release;
 		};
+		D00AF78420169552001B65D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveIOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D00AF78520169552001B65D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveIOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D00AF78720169552001B65D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveIOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boar.app/Boar";
+			};
+			name = Debug;
+		};
+		D00AF78820169552001B65D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6VBZ6H92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Boar-ReactiveIOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boar.app/Boar";
+			};
+			name = Release;
+		};
 		D00E604020128ABC00771202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1547,6 +1899,24 @@
 			buildConfigurations = (
 				D001AE07200D31E4006E8C36 /* Debug */,
 				D001AE08200D31E4006E8C36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00AF78320169552001B65D9 /* Build configuration list for PBXNativeTarget "Boar-ReactiveIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00AF78420169552001B65D9 /* Debug */,
+				D00AF78520169552001B65D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00AF78620169552001B65D9 /* Build configuration list for PBXNativeTarget "Boar-ReactiveIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00AF78720169552001B65D9 /* Debug */,
+				D00AF78820169552001B65D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
