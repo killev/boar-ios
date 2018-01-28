@@ -27,7 +27,7 @@ public extension CDContext {
     
     static func create<T:NSManagedObject>(_ type: T.Type, setup: @escaping (T) throws -> Void)-> Operation {
         return { (context: NSManagedObjectContext) in
-            let entity = NSEntityDescription.insertNewObject(forEntityName: T.entity().name!, into: context) as! T
+            let entity = NSEntityDescription.insertNewObject(forEntityName: T.entityName(), into: context) as! T
             try setup(entity)
         }
     }

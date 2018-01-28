@@ -114,14 +114,6 @@ public extension VCLifeCycle where Self: UIViewController, Self: Cell {
     }
 }
 
-public class ModernCtrlVC: VCService {
-    public func reload() {
-        
-    }
-    public func reload(code: String) {
-        
-    }
-}
 
 
 fileprivate struct ReactiveExtensionKeys{

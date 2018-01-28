@@ -120,7 +120,16 @@ public extension CDContext {
 }
 
 
-
+internal extension NSManagedObject {
+    class func entityName()->String {
+        if #available(iOS 10.0, *) {
+            return self.entity().name!
+        } else {
+            let entity = self.description().components(separatedBy: ".").last
+            return entity!
+        }
+    }
+}
 
 internal extension NSManagedObjectContext {
     convenience init(parent: NSManagedObjectContext, merge: Bool) {
@@ -134,7 +143,7 @@ internal extension NSManagedObjectContext {
     
     func find<T:NSManagedObject>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?) throws  -> [T] {
         
-        let request = NSFetchRequest<T>(entityName: T.entity().name!)
+        let request = NSFetchRequest<T>(entityName: T.entityName())
         request.predicate = pred
         
         var sortDesriptors = [NSSortDescriptor]()

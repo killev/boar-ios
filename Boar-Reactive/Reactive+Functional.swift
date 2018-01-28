@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveKit
 import BrightFutures
+import Bond
 
 public extension SignalProtocol where Element == Void {
     public func with<U: AnyObject>(weak left: U) -> Signal<U, Error> {
@@ -239,7 +240,7 @@ public extension SignalProtocol where Error == NoError {
     }
 }
 public extension DispatchQueue{
-
+    
     static func delay<E:Swift.Error>(_ delay: DispatchTimeInterval)->Future<Void, E>{
         return Future<Void, E>(value: (), delay: delay)
     }
@@ -252,6 +253,34 @@ public extension Promise {
         }catch {
             failure(error as! E)
         }
+    }
+}
+
+extension SignalProtocol where Element: ObservableArrayEventProtocol {
+    func array() -> Signal<[Element.Item], Error> {
+        return Signal{observer in
+            var isBatch = false
+            return self.observe{event in
+                switch event {
+                case .next(let change):
+                    switch change.change {
+                    case .beginBatchEditing: isBatch = true
+                    case .endBatchEditing: isBatch = false
+                    default: break
+                    }
+                    if !isBatch {
+                        observer.next(change.source)
+                    }
+                case .failed(let error):
+                    observer.failed(error)
+                case .completed:
+                    observer.completed()
+                }
+            }
+        }
+    }
+    func count()->SafeSignal<Int>{
+        return self.array().map { $0.count }.suppressError(logging: false)
     }
 }
 

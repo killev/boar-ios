@@ -11,14 +11,11 @@ import Bond
 import ReactiveKit
 import CoreData
 
-
-
-
 //this hack fixes compilation crash
 fileprivate func createFR<T:NSManagedObject>(context: NSManagedObjectContext, predicate: NSPredicate, order: [(String,Bool)])->NSFetchedResultsController<T> {
     
     //NSAsynchronousFetchRequest
-    let request = NSFetchRequest<T>(entityName: T.entity().name!)
+    let request = NSFetchRequest<T>(entityName: T.entityName())
     request.predicate = predicate
     
     var sortDesriptors = [NSSortDescriptor]()
@@ -30,7 +27,7 @@ fileprivate func createFR<T:NSManagedObject>(context: NSManagedObjectContext, pr
     return NSFetchedResultsController<T>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
 }
 
-public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<Item>  {
+public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<Item>, DisposeBagProvider  {
     
     override public var array: [Item] {
         return fetched.fetchedObjects ?? []
@@ -43,27 +40,36 @@ public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<I
     private var delegate: DelegateImpl!
     private var fetched: NSFetchedResultsController<Item>!
     
-    init(parent: NSManagedObjectContext, initial: NSPredicate = NSPredicate(value: false), order: [(String,Bool)]) {
+    
+    public let predicate: Property<NSPredicate>
+    public let bag = DisposeBag()
+    public init(parent: NSManagedObjectContext, initial: NSPredicate = NSPredicate(value: false), order: [(String,Bool)]) {
+        predicate = Property(initial)
         super.init()
+        
         delegate = DelegateImpl(subject: subject, source: self)
         queue.sync {
             self.context = NSManagedObjectContext(parent: parent, merge: true)
-
+            
             fetched = createFR(context: self.context, predicate: initial, order: order)
             fetched.delegate = delegate
         }
         
-        _ = self.context.async{ _ in
-            try self.fetched.performFetch()
-            }.onSuccess {_ in
-                self.subject.next(ObservableArrayEvent(change: .reset, source: self.array))
+        
+        predicate.with(weak: self).observeNext{ pred, s in
+            s.context.async{ _ in
+                s.fetched.fetchRequest.predicate = pred
+                try s.fetched.performFetch()
+                }.onSuccess {_ in
+                    self.subject.next(ObservableArrayEvent(change: .reset, source: self.array))
             }
+            }.dispose(in: bag)
     }
     
     deinit {
         print("deinit", type(of: self))
     }
-
+    
 }
 extension CDFetchedObservable {
     

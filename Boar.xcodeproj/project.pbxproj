@@ -103,6 +103,7 @@
 		D00E60932012CC5400771202 /* CDContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* CDContext+Operations.swift */; };
 		D00E6097201353F300771202 /* CDContextFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E6096201353F300771202 /* CDContextFetchTests.swift */; };
 		D00E6098201355BA00771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
+		D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,10 +284,12 @@
 		D00E60692012A40800771202 /* Boar-ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E60702012A40800771202 /* Boar_ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveTests.swift; sourceTree = "<group>"; };
 		D00E60722012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D00E607E2012A42600771202 /* Reactive+Functional.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Reactive+Functional.swift"; sourceTree = "<group>"; tabWidth = 2; };
+		D00E607E2012A42600771202 /* Reactive+Functional.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+Functional.swift"; sourceTree = "<group>"; tabWidth = 4; };
 		D00E60872012B83000771202 /* CDFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CDFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D00E60922012CC5400771202 /* CDContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContext+Operations.swift"; sourceTree = "<group>"; };
 		D00E6096201353F300771202 /* CDContextFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextFetchTests.swift; sourceTree = "<group>"; };
+		D04B044E201A5CCB002A61E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signals+observeInner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -639,6 +642,8 @@
 				D00E60632012A40800771202 /* Boar_Reactive.h */,
 				D00E60642012A40800771202 /* Info.plist */,
 				D00E607E2012A42600771202 /* Reactive+Functional.swift */,
+				D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */,
+				D04B044E201A5CCB002A61E9 /* README.md */,
 			);
 			indentWidth = 4;
 			path = "Boar-Reactive";
@@ -1166,6 +1171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00E607F2012A42600771202 /* Reactive+Functional.swift in Sources */,
+				D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,6 +58,10 @@ class CDContextFetchTests: XCTestCase {
             
         }.dispose(in: reactive.bag)
         
+        let collectionView = UICollectionView()
+        
+        //observable.bind(to: <#T##UITableView#>, using: <#T##TableViewBond#>)
+        
         for _ in 0...10{
             create()
         }

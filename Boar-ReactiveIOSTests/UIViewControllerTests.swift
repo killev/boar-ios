@@ -10,6 +10,17 @@ import XCTest
 import Boar_ReactiveIOS
 
 
+
+public class ModernCtrlVC: VCService {
+    public func reload() {
+        
+    }
+    public func reload(code: String) {
+        
+    }
+}
+
+
 public class ModernCtrl: UIViewController, VCLifeCycle, Cell {
     
     public func advise(viewModel: ModernCtrlVC) {
