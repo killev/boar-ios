@@ -114,5 +114,5 @@ public extension Cell where Self: UIViewController {
 
 extension ReactiveExtensions where Base : UICollectionViewCell, Base: Cell {
     var reuseBag: DisposeBag{ return base.reuseBag }
-    var selected: DynamicSubject<Bool>{ return keyPath("selected", ofType: Bool.self)}
+    var selected: DynamicSubject<Bool>{ return keyPath("selected", ofExpectedType: Bool.self)}
 }

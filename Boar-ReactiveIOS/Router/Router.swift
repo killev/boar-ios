@@ -55,7 +55,7 @@ class Router {
     
     
     
-    func present<T:VCService>(animated: Bool) -> AtomicObserver<T, NoError> {
+    func present<T:VCService>(animated: Bool) -> AtomicObserver<T> {
         return AtomicObserver(disposable: NonDisposable.instance) { event in
             switch event {
             case .next(let vcService):

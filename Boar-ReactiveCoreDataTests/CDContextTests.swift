@@ -47,12 +47,15 @@ class CDContextTests: XCTestCase {
         super.tearDown()
     }
     
-    private func create(){
+    private func create() {
+        let operation = CDContext.create(TestEntity.self) {
+            $0.id = UUID()
+            $0.url = ""
+        }
+        
         let add = context.perform {
-            return [CDContext.create(TestEntity.self) {
-                $0.id = UUID()
-                $0.url = ""
-                }
+            return [
+                operation
             ]
         }
         XCTAssertFutureSuccess("Should add 1 element", future: add)

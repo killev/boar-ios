@@ -47,6 +47,7 @@
 		D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D001AE22200D4044006E8C36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
+		D006651520221F2A00185ADC /* CDObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006651420221F2A00185ADC /* CDObject.swift */; };
 		D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */; };
 		D00AF75C2013D42F001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00AF77520169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */; };
@@ -252,6 +253,7 @@
 		D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+FuturesTests.swift"; sourceTree = "<group>"; };
 		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
 		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
+		D006651420221F2A00185ADC /* CDObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDObject.swift; sourceTree = "<group>"; };
 		D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Operations.swift"; sourceTree = "<group>"; };
 		D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_ReactiveIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveIOS.h; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				D00E60922012CC5400771202 /* CDContext+Operations.swift */,
 				D00E60872012B83000771202 /* CDFetchedObservable.swift */,
 				D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */,
+				D006651420221F2A00185ADC /* CDObject.swift */,
 			);
 			indentWidth = 4;
 			path = "Boar-ReactiveCoreData";
@@ -1149,6 +1152,7 @@
 			files = (
 				D00E604620128BBE00771202 /* CDContext.swift in Sources */,
 				D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */,
+				D006651520221F2A00185ADC /* CDObject.swift in Sources */,
 				D00E60932012CC5400771202 /* CDContext+Operations.swift in Sources */,
 				D00E60882012B83000771202 /* CDFetchedObservable.swift in Sources */,
 			);

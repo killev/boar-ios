@@ -11,7 +11,7 @@ import ReactiveKit
 
 public extension SignalProtocol where Element: Sequence {
     public typealias Item = Element.Element
-    func observeInner<T:SignalProtocol>(f: @escaping (Item)->T)->Signal<Element, Error> where T.Error == NoError {
+    func observeInner<T:SignalProtocol>(f: @escaping (Item)->T)->Signal<Element> {
         
         return Signal{ observer in
             

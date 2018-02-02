@@ -60,9 +60,12 @@ public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<I
             s.context.async{ _ in
                 s.fetched.fetchRequest.predicate = pred
                 try s.fetched.performFetch()
+                
                 }.onSuccess {_ in
                     self.subject.next(ObservableArrayEvent(change: .reset, source: self.array))
-            }
+                }.onFailure{ error in
+                     self.subject.failed(error)
+                }
             }.dispose(in: bag)
     }
     
@@ -83,7 +86,7 @@ extension CDFetchedObservable {
         func add(change: ObservableArrayChange) {
             changes.append(change)
         }
-        func populate(to subject: PublishSubject<ObservableArrayEvent<Item>, NoError>, with source: CDFetchedObservable) {
+        func populate(to subject: PublishSubject<ObservableArrayEvent<Item>>, with source: CDFetchedObservable) {
             
             if changes.count > 40 {
                 subject.next(ObservableArrayEvent(change: .reset, source: source.array))
@@ -100,11 +103,11 @@ extension CDFetchedObservable {
     }
     
     class DelegateImpl : NSObject, NSFetchedResultsControllerDelegate {
-        weak var subject: PublishSubject<ObservableArrayEvent<Item>, NoError>?
+        weak var subject: PublishSubject<ObservableArrayEvent<Item>>?
         weak var source: CDFetchedObservable?
         
         
-        init(subject: PublishSubject<ObservableArrayEvent<Item>, NoError>, source : CDFetchedObservable) {
+        init(subject: PublishSubject<ObservableArrayEvent<Item>>, source : CDFetchedObservable) {
             self.subject = subject
             self.source = source
         }

@@ -8,6 +8,7 @@
 
 import Bond
 import ReactiveKit
+import Boar_ReactiveCoreData
 import CoreData
 
 class TestEntity : NSManagedObject {
@@ -20,6 +21,16 @@ class TestEntity : NSManagedObject {
     @NSManaged public var url: String?
 }
 
-extension TestEntity {
+
+public protocol CDTestEntity : CDObject {
+    
+}
+
+extension TestEntity : CDTestEntity  {
    
+}
+extension ReactiveExtensions where Base == TestEntity {
+    public var id: DynamicSubject2<UIID>{
+        return keyPath("id", ofExpectedType: UUID.self, context: .immediate)
+    }
 }

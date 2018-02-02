@@ -12,7 +12,7 @@ import BrightFutures
 import Bond
 
 public extension SignalProtocol where Element == Void {
-    public func with<U: AnyObject>(weak left: U) -> Signal<U, Error> {
+    public func with<U: AnyObject>(weak left: U) -> Signal<U> {
         weak var weak: U? = left
         
         return Signal { observer in
@@ -32,7 +32,7 @@ public extension SignalProtocol where Element == Void {
         }
     }
     
-    public func with<U>(left: U) -> Signal<U, Error> {
+    public func with<U>(left: U) -> Signal<U> {
         
         return Signal { observer in
             return self.observe { event in
@@ -51,7 +51,7 @@ public extension SignalProtocol where Element == Void {
 
 
 public extension SignalProtocol {
-    public func once()->Signal<Element, Error> {
+    public func once()->Signal<Element> {
         var happened = false
         return Signal { observer in
             return self.observe { event in
@@ -70,7 +70,7 @@ public extension SignalProtocol {
             }
         }
     }
-    public func with<U: AnyObject>(weak left: U) -> Signal<(Element, U), Error> {
+    public func with<U: AnyObject>(weak left: U) -> Signal<(Element, U)> {
         weak var weak: U? = left
         
         return Signal { observer in
@@ -90,7 +90,7 @@ public extension SignalProtocol {
         }
     }
     
-    public func with<U>(val: U) -> Signal<(Element, U), Error> {
+    public func with<U>(val: U) -> Signal<(Element, U)> {
         
         return Signal { observer in
             return self.observe { event in
@@ -106,7 +106,7 @@ public extension SignalProtocol {
         }
     }
     
-    func doOnNext(_ next: @escaping (Element)->Void)->Signal<Element, Error>{
+    func doOnNext(_ next: @escaping (Element)->Void)->Signal<Element>{
         return doOn(next: next)
     }
     //@discardableResult
@@ -122,7 +122,7 @@ public extension Future {
         return prop
     }
     
-    var sig: Signal<T, E> {
+    var sig: Signal<T> {
         return Signal { observer in
             self.onSuccess(callback: observer.completed)
             self.onFailure(callback: observer.failed)
@@ -212,14 +212,14 @@ public extension Future where T == Void {
 
 public extension SignalProtocol where Element : OptionalProtocol {
     
-    func recoverNil(_ def: @autoclosure @escaping ()->Element.Wrapped)-> Signal<Element.Wrapped, Error> {
+    func recoverNil(_ def: @autoclosure @escaping ()->Element.Wrapped)-> Signal<Element.Wrapped> {
         return self.map{ $0._unbox ?? def() }
     }
 }
 
-public extension SignalProtocol where Error == NoError {
+public extension SignalProtocol {
     
-    public func flatMap<U, E>(_ transform: @escaping (Element) -> Future<U, E>) -> Signal<U, E> {
+    public func flatMap<U, E>(_ transform: @escaping (Element) -> Future<U, E>) -> Signal<U> {
         return Signal { observer in
             var token = InvalidationToken()
             return self.observe { event in
@@ -257,7 +257,7 @@ public extension Promise {
 }
 
 extension SignalProtocol where Element: ObservableArrayEventProtocol {
-    func array() -> Signal<[Element.Item], Error> {
+    func array() -> Signal<[Element.Item]> {
         return Signal{observer in
             var isBatch = false
             return self.observe{event in
