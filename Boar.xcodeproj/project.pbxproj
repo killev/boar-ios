@@ -47,7 +47,7 @@
 		D001AE21200D4044006E8C36 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D001AE22200D4044006E8C36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
-		D006651520221F2A00185ADC /* CDObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006651420221F2A00185ADC /* CDObject.swift */; };
+		D006651520221F2A00185ADC /* DBEntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006651420221F2A00185ADC /* DBEntityProtocol.swift */; };
 		D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */; };
 		D00AF75C2013D42F001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00AF77520169552001B65D9 /* Boar_ReactiveIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */; };
@@ -73,13 +73,12 @@
 		D00AF7A62017D312001B65D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00E60222012868500771202 /* ImmutableMapper+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60212012868500771202 /* ImmutableMapper+defaults.swift */; };
 		D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
-		D00E603820128ABC00771202 /* CDContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E603720128ABC00771202 /* CDContextTests.swift */; };
+		D00E603820128ABC00771202 /* DBContextCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E603720128ABC00771202 /* DBContextCoreDataTests.swift */; };
 		D00E603A20128ABC00771202 /* Boar_ReactiveCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00E603D20128ABC00771202 /* Boar_ReactiveCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; };
 		D00E603E20128ABC00771202 /* Boar_ReactiveCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00E602820128ABB00771202 /* Boar_ReactiveCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D00E604620128BBE00771202 /* CDContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* CDContext.swift */; };
+		D00E604620128BBE00771202 /* DBContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E604520128BBE00771202 /* DBContext.swift */; };
 		D00E60492012947800771202 /* tests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D00E60472012947800771202 /* tests.xcdatamodeld */; };
-		D00E605820129CE600771202 /* TestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E605720129CE600771202 /* TestEntity.swift */; };
 		D00E605B2012A0EC00771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
 		D00E606A2012A40800771202 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
 		D00E60712012A40800771202 /* Boar_ReactiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60702012A40800771202 /* Boar_ReactiveTests.swift */; };
@@ -91,7 +90,7 @@
 		D00E60832012A75200771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
 		D00E60842012A75200771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D00E60862012A76E00771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
-		D00E60882012B83000771202 /* CDFetchedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* CDFetchedObservable.swift */; };
+		D00E60882012B83000771202 /* CoreDataFetchedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* CoreDataFetchedObservable.swift */; };
 		D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E608B2012BA4A00771202 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
@@ -101,10 +100,14 @@
 		D00E608F2012BB6F00771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
 		D00E60902012BB6F00771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D00E60912012BB6F00771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
-		D00E60932012CC5400771202 /* CDContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* CDContext+Operations.swift */; };
+		D00E60932012CC5400771202 /* CoreDataDriver+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */; };
 		D00E6097201353F300771202 /* CDContextFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E6096201353F300771202 /* CDContextFetchTests.swift */; };
 		D00E6098201355BA00771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */; };
+		D088857C202493EF001F6D4F /* ReContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857B202493EF001F6D4F /* ReContext.swift */; };
+		D088857E2024A266001F6D4F /* CoreDataDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857D2024A266001F6D4F /* CoreDataDriver.swift */; };
+		D08885802024A655001F6D4F /* DBContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857F2024A655001F6D4F /* DBContext+Operations.swift */; };
+		D08885832024B851001F6D4F /* CDTestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08885822024B851001F6D4F /* CDTestEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,7 +256,7 @@
 		D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+FuturesTests.swift"; sourceTree = "<group>"; };
 		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
 		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
-		D006651420221F2A00185ADC /* CDObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDObject.swift; sourceTree = "<group>"; };
+		D006651420221F2A00185ADC /* DBEntityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBEntityProtocol.swift; sourceTree = "<group>"; };
 		D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Operations.swift"; sourceTree = "<group>"; };
 		D00AF76C20169552001B65D9 /* Boar_ReactiveIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_ReactiveIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveIOS.h; sourceTree = "<group>"; };
@@ -274,11 +277,10 @@
 		D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveCoreData.h; sourceTree = "<group>"; };
 		D00E602B20128ABB00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00E603020128ABB00771202 /* Boar-ReactiveCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveCoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D00E603720128ABC00771202 /* CDContextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextTests.swift; sourceTree = "<group>"; };
+		D00E603720128ABC00771202 /* DBContextCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBContextCoreDataTests.swift; sourceTree = "<group>"; };
 		D00E603920128ABC00771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D00E604520128BBE00771202 /* CDContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContext.swift; sourceTree = "<group>"; };
+		D00E604520128BBE00771202 /* DBContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBContext.swift; sourceTree = "<group>"; };
 		D00E60482012947800771202 /* tests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tests.xcdatamodel; sourceTree = "<group>"; };
-		D00E605720129CE600771202 /* TestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEntity.swift; sourceTree = "<group>"; };
 		D00E60592012A0D800771202 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = Carthage/Build/iOS; sourceTree = SOURCE_ROOT; };
 		D00E60612012A40800771202 /* Boar_Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00E60632012A40800771202 /* Boar_Reactive.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Boar_Reactive.h; sourceTree = "<group>"; tabWidth = 2; };
@@ -287,11 +289,15 @@
 		D00E60702012A40800771202 /* Boar_ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveTests.swift; sourceTree = "<group>"; };
 		D00E60722012A40800771202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00E607E2012A42600771202 /* Reactive+Functional.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+Functional.swift"; sourceTree = "<group>"; tabWidth = 4; };
-		D00E60872012B83000771202 /* CDFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CDFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
-		D00E60922012CC5400771202 /* CDContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContext+Operations.swift"; sourceTree = "<group>"; };
+		D00E60872012B83000771202 /* CoreDataFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataDriver+Operations.swift"; sourceTree = "<group>"; };
 		D00E6096201353F300771202 /* CDContextFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextFetchTests.swift; sourceTree = "<group>"; };
 		D04B044E201A5CCB002A61E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signals+observeInner.swift"; sourceTree = "<group>"; };
+		D088857B202493EF001F6D4F /* ReContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReContext.swift; sourceTree = "<group>"; };
+		D088857D2024A266001F6D4F /* CoreDataDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDriver.swift; sourceTree = "<group>"; };
+		D088857F2024A655001F6D4F /* DBContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBContext+Operations.swift"; sourceTree = "<group>"; };
+		D08885822024B851001F6D4F /* CDTestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTestEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,11 +612,12 @@
 			children = (
 				D00E602A20128ABB00771202 /* Boar_ReactiveCoreData.h */,
 				D00E602B20128ABB00771202 /* Info.plist */,
-				D00E604520128BBE00771202 /* CDContext.swift */,
-				D00E60922012CC5400771202 /* CDContext+Operations.swift */,
-				D00E60872012B83000771202 /* CDFetchedObservable.swift */,
+				D00E604520128BBE00771202 /* DBContext.swift */,
+				D088857F2024A655001F6D4F /* DBContext+Operations.swift */,
+				D006651420221F2A00185ADC /* DBEntityProtocol.swift */,
+				D08885812024A864001F6D4F /* CoreDataDriver */,
 				D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */,
-				D006651420221F2A00185ADC /* CDObject.swift */,
+				D088857B202493EF001F6D4F /* ReContext.swift */,
 			);
 			indentWidth = 4;
 			path = "Boar-ReactiveCoreData";
@@ -621,7 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				D00E604A201299CB00771202 /* Entity */,
-				D00E603720128ABC00771202 /* CDContextTests.swift */,
+				D00E603720128ABC00771202 /* DBContextCoreDataTests.swift */,
 				D00E6096201353F300771202 /* CDContextFetchTests.swift */,
 				D00E603920128ABC00771202 /* Info.plist */,
 				D00E60472012947800771202 /* tests.xcdatamodeld */,
@@ -634,7 +641,7 @@
 		D00E604A201299CB00771202 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D00E605720129CE600771202 /* TestEntity.swift */,
+				D08885822024B851001F6D4F /* CDTestEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -663,6 +670,16 @@
 			path = "Boar-ReactiveTests";
 			sourceTree = "<group>";
 			tabWidth = 2;
+		};
+		D08885812024A864001F6D4F /* CoreDataDriver */ = {
+			isa = PBXGroup;
+			children = (
+				D00E60872012B83000771202 /* CoreDataFetchedObservable.swift */,
+				D088857D2024A266001F6D4F /* CoreDataDriver.swift */,
+				D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */,
+			);
+			path = CoreDataDriver;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -709,7 +726,7 @@
 				D001ADA8200CF1C1006E8C36 /* Sources */,
 				D001ADA9200CF1C1006E8C36 /* Frameworks */,
 				D001ADAA200CF1C1006E8C36 /* Resources */,
-				D001ADE5200D3020006E8C36 /* ShellScript */,
+				D001ADE5200D3020006E8C36 /* Carthage copy-frameworks */,
 				D001AE01200D31E4006E8C36 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1060,7 +1077,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D001ADE5200D3020006E8C36 /* ShellScript */ = {
+		D001ADE5200D3020006E8C36 /* Carthage copy-frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1076,7 +1093,10 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 			);
+			name = "Carthage copy-frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1150,11 +1170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00E604620128BBE00771202 /* CDContext.swift in Sources */,
+				D088857C202493EF001F6D4F /* ReContext.swift in Sources */,
+				D00E604620128BBE00771202 /* DBContext.swift in Sources */,
 				D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */,
-				D006651520221F2A00185ADC /* CDObject.swift in Sources */,
-				D00E60932012CC5400771202 /* CDContext+Operations.swift in Sources */,
-				D00E60882012B83000771202 /* CDFetchedObservable.swift in Sources */,
+				D088857E2024A266001F6D4F /* CoreDataDriver.swift in Sources */,
+				D006651520221F2A00185ADC /* DBEntityProtocol.swift in Sources */,
+				D08885802024A655001F6D4F /* DBContext+Operations.swift in Sources */,
+				D00E60932012CC5400771202 /* CoreDataDriver+Operations.swift in Sources */,
+				D00E60882012B83000771202 /* CoreDataFetchedObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,9 +1186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00E6097201353F300771202 /* CDContextFetchTests.swift in Sources */,
-				D00E603820128ABC00771202 /* CDContextTests.swift in Sources */,
+				D08885832024B851001F6D4F /* CDTestEntity.swift in Sources */,
+				D00E603820128ABC00771202 /* DBContextCoreDataTests.swift in Sources */,
 				D00E60492012947800771202 /* tests.xcdatamodeld in Sources */,
-				D00E605820129CE600771202 /* TestEntity.swift in Sources */,
 				D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

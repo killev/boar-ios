@@ -27,7 +27,7 @@ fileprivate func createFR<T:NSManagedObject>(context: NSManagedObjectContext, pr
     return NSFetchedResultsController<T>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
 }
 
-public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<Item>, DisposeBagProvider  {
+public class CoreDataFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<Item>, DisposeBagProvider  {
     
     override public var array: [Item] {
         return fetched.fetchedObjects ?? []
@@ -74,7 +74,7 @@ public class CDFetchedObservable <Item: NSManagedObject> : ObservableArrayBase<I
     }
     
 }
-extension CDFetchedObservable {
+extension CoreDataFetchedObservable {
     
     class BatchUpdater {
         
@@ -86,17 +86,17 @@ extension CDFetchedObservable {
         func add(change: ObservableArrayChange) {
             changes.append(change)
         }
-        func populate(to subject: PublishSubject<ObservableArrayEvent<Item>>, with source: CDFetchedObservable) {
+        func populate(to subject: PublishSubject<ObservableArrayEvent<Item>>, with items: Array<Item>) {
             
             if changes.count > 40 {
-                subject.next(ObservableArrayEvent(change: .reset, source: source.array))
+                subject.next(ObservableArrayEvent(change: .reset, source: items))
             } else if changes.count > 0 {
                 // ...otherwise batch:
-                subject.next(ObservableArrayEvent(change: .beginBatchEditing, source: source.array))
+                subject.next(ObservableArrayEvent(change: .beginBatchEditing, source: items))
                 changes.forEach { change in
-                    subject.next(ObservableArrayEvent(change: change, source: source.array))
+                    subject.next(ObservableArrayEvent(change: change, source: items))
                 }
-                subject.next(ObservableArrayEvent(change: .endBatchEditing, source: source.array))
+                subject.next(ObservableArrayEvent(change: .endBatchEditing, source: items))
             }
             
         }
@@ -104,10 +104,10 @@ extension CDFetchedObservable {
     
     class DelegateImpl : NSObject, NSFetchedResultsControllerDelegate {
         weak var subject: PublishSubject<ObservableArrayEvent<Item>>?
-        weak var source: CDFetchedObservable?
+        weak var source: CoreDataFetchedObservable?
         
         
-        init(subject: PublishSubject<ObservableArrayEvent<Item>>, source : CDFetchedObservable) {
+        init(subject: PublishSubject<ObservableArrayEvent<Item>>, source : CoreDataFetchedObservable) {
             self.subject = subject
             self.source = source
         }
@@ -136,7 +136,7 @@ extension CDFetchedObservable {
             guard let subject = subject, let source = source else {
                 return
             }
-            batchUpdater?.populate(to: subject, with: source)
+            batchUpdater?.populate(to: subject, with: source.array)
             batchUpdater = nil
         }
         public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType){

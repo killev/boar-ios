@@ -30,27 +30,28 @@ public extension UIApplication {
 }
 
 
-class CDContextTests: XCTestCase {
+class DBContextCoreDataTests: XCTestCase {
     
-    var context: CDContext!
+    var context: DBContext!
     override func setUp() {
         super.setUp()
-        let bundle    = Bundle(for: CDContextTests.self)
+        let bundle    = Bundle(for: DBContextCoreDataTests.self)
         let modelURL  = bundle.url(forResource: "tests", withExtension: "momd")!
         let sqliteURL: URL = UIApplication.documentsDirectory.appendingPathComponent("Testl-\(UUID().uuidString).sqlite")
         try? FileManager.default.removeItem(at: sqliteURL)
-        context = try! CDContext(modelURL, sqliteURL: sqliteURL)
+        
+        context = try! DBContext(modelURL, sqliteURL: sqliteURL)
     }
     
     override func tearDown() {
-        context.remove()
+        context.delete()
         super.tearDown()
     }
     
     private func create() {
-        let operation = CDContext.create(TestEntity.self) {
-            $0.id = UUID()
-            $0.url = ""
+        
+        let operation = DBContext.create(TestEntity.self) {
+            $0.patch(with: ["id": UUID(), "url": ""])
         }
         
         let add = context.perform {
@@ -64,38 +65,41 @@ class CDContextTests: XCTestCase {
     func testCreate() {
         
         create()
+        
         XCTAssertFutureSuccess("Should have 1 element", future: context.findAll(TestEntity.self)){ res in
             XCTAssertEqual(1, res.count)
         }
     }
     
     func testCreateFail() {
-        
+
         let future = context.perform {
-            return [CDContext.create(TestEntity.self) {_ in
+            return [DBContext.create(TestEntity.self) {_ in
                 throw NSError(domain: "dom", code: 123, userInfo: nil)
                 }
             ]
         }
         XCTAssertFutureFailure("Shouldn't add any elements", future: future)
-        
+
         XCTAssertFutureSuccess("Shouldn't have any elements", future: context.findAll(TestEntity.self)){ res in
             XCTAssertEqual(0, res.count)
         }
     }
     
     func testUpdate() {
-        
+
         create()
         let newUrl = "bla-bla"
-        
+
         let update = context.findAll(TestEntity.self)
             .flatMap{ res in
-                self.context.perform {
-                    [CDContext.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
+                return self.context.perform {
+                    [
+                        DBContext.update(TestEntity.self, obj: res.first!){ $0.patch(with: ["url": newUrl])}
+                    ]
                 }
         }
-        
+
         XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
             XCTAssertEqual(1, res.updated.count)
         }
@@ -105,43 +109,16 @@ class CDContextTests: XCTestCase {
         }
     }
     
-    func testUpdateConfirm() {
-        
-        create()
-        let newUrl = "bla-bla"
-        
-        let update = context.findAll(TestEntity.self)
-            .flatMap{ res in
-                self.context.performConfirm {
-                    [CDContext.update(TestEntity.self, obj: res.first!){$0.url = newUrl}]
-                }
-        }
-        
-        
-        XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
-            XCTAssertEqual(1, res.updated.count)
-        }
-        let rollback = update.flatMap{ $0.rollback() }
-        
-      
-        XCTAssertFutureSuccess("Should rollback all element", future: rollback)
-        XCTAssertFutureSuccess("All elements should have ",
-                               future: context.findAll(TestEntity.self)) { res in
-            XCTAssertEqual(1, res.count)
-            XCTAssertEqual("", res.first!.url)
-        }
-    }
-    
     func testBatchUpdate() {
-        
+
         create()
         let newUrl = "bla-bla"
-        
+
 
         let update = context.perform {
-            [CDContext.update(TestEntity.self, pred: NSPredicate(value: true) ){$0.url = newUrl}]
+            [DBContext.update(TestEntity.self, pred: NSPredicate(value: true) ){ $0.patch(with: ["url": newUrl])}]
         }
-        
+
         XCTAssertFutureSuccess("Should update 1 element", future: update){ res in
             XCTAssertEqual(1, res.updated.count)
         }
