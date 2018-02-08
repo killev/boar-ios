@@ -39,12 +39,15 @@ public final class CoreDataDriver {
         managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)!
         coordinator        = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
         
+        let container = NSPersistentContainer(name: "Name", managedObjectModel: managedObjectModel)
+        
         store = try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: sqliteURL, options: [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true])
         
         coordinatorQueue.sync {
             self.сoordinatorContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
             self.сoordinatorContext.persistentStoreCoordinator = self.coordinator
         }
+        
         
         backgroundQueue.sync {
             self.backgroundContext = self.сoordinatorContext.fork(merge: true)

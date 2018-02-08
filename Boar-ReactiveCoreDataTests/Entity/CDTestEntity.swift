@@ -12,17 +12,19 @@ import Bond
 
 
 extension TestEntity : DBEntityProtocol{
-
-    
-    var rid: DynamicSubject2<UUID>{
-        return reactive.keyPath("id", ofExpectedType: UUID.self, context: .immediate)
-    }
-    var rurl: DynamicSubject2<UUID>{
-        return reactive.keyPath("url", ofExpectedType: UUID.self, context: .immediate)
-    }
+ 
     public func patch(with patch: Dictionary<String, Any?>) -> Self {
         patch.forEach { self.setValue($1, forKey: $0) }
         return self
+    }
+}
+
+extension ReactiveExtensions where Base == TestEntity {
+    var id: DynamicSubject2<UUID>{
+        return reactive.keyPath("id", ofExpectedType: UUID.self, context: .immediate)
+    }
+    var url: DynamicSubject2<UUID>{
+        return reactive.keyPath("url", ofExpectedType: UUID.self, context: .immediate)
     }
 }
 

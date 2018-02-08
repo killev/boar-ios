@@ -24,7 +24,6 @@
 		D001ADE2200D2D92006E8C36 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD8200D2D92006E8C36 /* AlamofireObjectMapper.framework */; };
 		D001ADE3200D2D92006E8C36 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD9200D2D92006E8C36 /* AlamofireNetworkActivityIndicator.framework */; };
 		D001ADF4200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADEB200D31E4006E8C36 /* Boar_ReactiveNetworking.framework */; };
-		D001ADFB200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001ADFA200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift */; };
 		D001ADFD200D31E4006E8C36 /* Boar_ReactiveNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D001ADED200D31E4006E8C36 /* Boar_ReactiveNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D001AE00200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADEB200D31E4006E8C36 /* Boar_ReactiveNetworking.framework */; };
 		D001AE02200D31E4006E8C36 /* Boar_ReactiveNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADEB200D31E4006E8C36 /* Boar_ReactiveNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -246,7 +245,6 @@
 		D001ADED200D31E4006E8C36 /* Boar_ReactiveNetworking.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveNetworking.h; sourceTree = "<group>"; tabWidth = 2; };
 		D001ADEE200D31E4006E8C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D001ADF3200D31E4006E8C36 /* Boar-ReactiveNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-ReactiveNetworkingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D001ADFA200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boar_ReactiveNetworkingTests.swift; sourceTree = "<group>"; };
 		D001ADFC200D31E4006E8C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D001AE09200D3338006E8C36 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D001AE0A200D3338006E8C36 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -532,7 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				D001AE23200D41DF006E8C36 /* Helpers */,
-				D001ADFA200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift */,
 				D001ADFC200D31E4006E8C36 /* Info.plist */,
 				D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */,
 			);
@@ -1138,7 +1135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D001AE25200D41FF006E8C36 /* Future+XCTest.swift in Sources */,
-				D001ADFB200D31E4006E8C36 /* Boar_ReactiveNetworkingTests.swift in Sources */,
 				D001AE16200D3ACB006E8C36 /* Alamofire+FuturesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
