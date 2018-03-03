@@ -12,7 +12,7 @@ import XCTest
 import Bond
 import ReactiveKit
 
-//class CDContextFetchTests: XCTestCase {
+class CDContextFetchTests: XCTestCase {
 //    
 //    var context: CDContext!
 //    override func setUp() {

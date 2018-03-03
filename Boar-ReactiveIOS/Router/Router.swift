@@ -55,26 +55,26 @@ class Router {
     
     
     
-    func present<T:VCService>(animated: Bool) -> AtomicObserver<T> {
-        return AtomicObserver(disposable: NonDisposable.instance) { event in
-            switch event {
-            case .next(let vcService):
-                let vc = UIStoryboard(name: T.controllerName, bundle: nil)
-                    .instantiateViewController(withIdentifier: T.controllerName)
-                
-                if let vc = vc as? CellBase {
-                    vc._vm = vcService
-                }
-                
-                Router.topViewController()?.present(vc, animated: animated)
-                
-            default: break
-            }
-        }
-    }
-    static func asVC<T, VC: ViewController>(_ vcType: T.Type, vc: UIViewController)->VC? where VC.Service == T{
-        return vc as? VC
-    }
+//    func present<T:VCService>(animated: Bool) -> AtomicObserver<T> {
+//        return AtomicObserver(disposable: NonDisposable.instance) { event in
+//            switch event {
+//            case .next(let vcService):
+//                let vc = UIStoryboard(name: T.controllerName, bundle: nil)
+//                    .instantiateViewController(withIdentifier: T.controllerName)
+//
+//                if let vc = vc as? CellBase {
+//                    vc._vm = vcService
+//                }
+//
+//                Router.topViewController()?.present(vc, animated: animated)
+//
+//            default: break
+//            }
+//        }
+//    }
+//    static func asVC<T, VC: ViewController>(_ vcType: T.Type, vc: UIViewController)->VC? where VC.Service == T{
+//        return vc as? VC
+//    }
     
 }
 

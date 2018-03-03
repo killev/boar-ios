@@ -9,7 +9,7 @@
 import Foundation
 import Boar_ReactiveCoreData
 import Bond
-
+import ReactiveKit
 
 extension TestEntity : DBEntityProtocol{
  
@@ -21,10 +21,10 @@ extension TestEntity : DBEntityProtocol{
 
 extension ReactiveExtensions where Base == TestEntity {
     var id: DynamicSubject2<UUID>{
-        return reactive.keyPath("id", ofExpectedType: UUID.self, context: .immediate)
+        return keyPath("id", ofExpectedType: UUID.self, context: .immediate)
     }
     var url: DynamicSubject2<UUID>{
-        return reactive.keyPath("url", ofExpectedType: UUID.self, context: .immediate)
+        return keyPath("url", ofExpectedType: UUID.self, context: .immediate)
     }
 }
 

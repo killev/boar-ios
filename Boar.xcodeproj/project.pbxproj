@@ -107,6 +107,7 @@
 		D088857E2024A266001F6D4F /* CoreDataDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857D2024A266001F6D4F /* CoreDataDriver.swift */; };
 		D08885802024A655001F6D4F /* DBContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857F2024A655001F6D4F /* DBContext+Operations.swift */; };
 		D08885832024B851001F6D4F /* CDTestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08885822024B851001F6D4F /* CDTestEntity.swift */; };
+		D0923FE320347E3100FB1185 /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0923FE220347E3100FB1185 /* UICollectionViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,7 +251,7 @@
 		D001AE0A200D3338006E8C36 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		D001AE0B200D3338006E8C36 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		D001AE0C200D3338006E8C36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Futures.swift"; sourceTree = "<group>"; };
+		D001AE11200D3381006E8C36 /* Alamofire+Futures.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Futures.swift"; sourceTree = "<group>"; tabWidth = 4; };
 		D001AE15200D3ACB006E8C36 /* Alamofire+FuturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+FuturesTests.swift"; sourceTree = "<group>"; };
 		D001AE17200D3B88006E8C36 /* Alamofire+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Auth.swift"; sourceTree = "<group>"; };
 		D001AE24200D41FF006E8C36 /* Future+XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+XCTest.swift"; sourceTree = "<group>"; };
@@ -296,6 +297,7 @@
 		D088857D2024A266001F6D4F /* CoreDataDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDriver.swift; sourceTree = "<group>"; };
 		D088857F2024A655001F6D4F /* DBContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBContext+Operations.swift"; sourceTree = "<group>"; };
 		D08885822024B851001F6D4F /* CDTestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTestEntity.swift; sourceTree = "<group>"; };
+		D0923FE220347E3100FB1185 /* UICollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */,
+				D0923FE220347E3100FB1185 /* UICollectionViewTests.swift */,
 				D00AF77D20169552001B65D9 /* Info.plist */,
 			);
 			path = "Boar-ReactiveIOSTests";
@@ -1158,6 +1161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0923FE320347E3100FB1185 /* UICollectionViewTests.swift in Sources */,
 				D00AF77C20169552001B65D9 /* UIViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

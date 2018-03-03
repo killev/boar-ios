@@ -10,7 +10,7 @@ import Foundation
 import ReactiveKit
 import BrightFutures
 
-public protocol VCService : CellVM {
+public protocol VCService {
     func reload()
     func reload(code: String)
 }
@@ -107,7 +107,7 @@ public protocol VCLifeCycle {
 
 public extension VCLifeCycle where Self: UIViewController, Self: Cell {
     func viewDidLoadImpl() {
-        advise(viewModel: viewModel)
+     //   advise(viewModel: viewModel)
     }
     func viewWillAppearImpl(){
         
@@ -120,7 +120,6 @@ fileprivate struct ReactiveExtensionKeys{
     static var viewWillAppearKey = "viewWillAppearKey"
 }
 extension ReactiveExtensions where Base: UIViewController {
-
     
     var viewWillAppear: SafePublishSubject<UIViewController> {
         return dynamicROProperty(object: self, &ReactiveExtensionKeys.viewWillAppearKey){
