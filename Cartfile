@@ -1,6 +1,6 @@
 # Reactive
 
-git "file:///Users/Peter/Work/Bond" "master"
+github "killev/Bond" "master"
 github "Thomvis/BrightFutures"
 
 # Networking

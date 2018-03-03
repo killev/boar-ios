@@ -148,6 +148,9 @@ extension SizeInfo {
     }
 }
 
+struct DataInfo {
+    
+}
 
 public struct DS<Item: VM>: CollectionViewBond {
     func register<T:VM, C: Cell>(vm: T.Type,  cell: C.Type) where C: UICollectionViewCell, C.ViewModel == T {
@@ -155,7 +158,9 @@ public struct DS<Item: VM>: CollectionViewBond {
     }
     
     
-    func register<T, C: Cell, V: VM>(vm: T.Type,  cell: C.Type, lazy: (T)->V) where C: UICollectionViewCell, C.ViewModel == T {
+    func register<T, C: Cell, V: VM>(data: T.Type,  cell: C.Type, lazy: (T)->V) where C: UICollectionViewCell, C.ViewModel == T {
+        
+        
         
     }
     
