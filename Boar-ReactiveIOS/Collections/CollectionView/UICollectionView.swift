@@ -10,26 +10,13 @@ import UIKit
 import Bond
 import ReactiveKit
 
-protocol CellConfigurer {
-    func confugure(cell: UICollectionViewCell)
-}
 public protocol Configurable {
     associatedtype Config
     func configure(with: Config)
 }
 
-class TypedConfigurer<Cell: Configurable> : CellConfigurer where Cell: UICollectionViewCell {
-    let config : Cell.Config
-    
-    init(config: Cell.Config) {
-        self.config = config
-    }
-    func confugure(cell: UICollectionViewCell) {
-        if let cell = cell as? Cell {
-            cell.configure(with: config)
-        }
-    }
-}
+typealias Configurer = (UICollectionViewCell)->()
+
 class NonHashableWrapper<T>{
     let object:T
     init(_ object: T){
@@ -38,11 +25,11 @@ class NonHashableWrapper<T>{
 }
 
 
-public extension UICollectionView {
+extension UICollectionView {
 
     static var configurersKey = "configurersKey"
     
-    fileprivate var configurers: Dictionary<String, CellConfigurer> {
+    fileprivate var configurers: Dictionary<String, Configurer> {
         get {
             return dynamicProperty(self, &UICollectionView.configurersKey)
                 .value(initial: { NonHashableWrapper([:]) }).object
@@ -54,48 +41,35 @@ public extension UICollectionView {
         }
     }
     
-    func register<T: UICollectionViewCell>(_ type: T.Type) {
+    public func register<T: UICollectionViewCell>(_ type: T.Type) {
         let cellId = "\(type)"
         let nib    = UINib(nibName: cellId, bundle: Bundle.main)
         self.register(nib, forCellWithReuseIdentifier: cellId)
     }
     
-    func register<T: UICollectionViewCell>(_ type: T.Type, with config: T.Config) where T: Configurable {
-        configurers["\(type)"] = TypedConfigurer<T>(config: config)
+    public func register<T: UICollectionViewCell>(_ type: T.Type, with configurer: @escaping (T)->()) {
+        configurers["\(type)"] = { (cell: UICollectionViewCell) in
+            configurer(cell as! T)
+        }
         self.register(type)
-        
     }
-    func dequeue(identifier: String, for indexPath: IndexPath) -> UICollectionViewCell {
+    
+    public func register<T: UICollectionViewCell>(_ type: T.Type, with config: T.Config) where T: Configurable {
+        register(type){ $0.configure(with: config) }
+    }
+    
+    public func dequeue(identifier: String, for indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        configurers["\(type(of: cell))"]?.confugure(cell: cell)
+        configurers["\(type(of: cell))"]?(cell)
         return cell
     }
     
-    func dequeue<T:UICollectionViewCell>(_ _type: T.Type, for indexPath: IndexPath) -> T {
+    public func dequeue<T:UICollectionViewCell>(_ _type: T.Type, for indexPath: IndexPath) -> T {
         return dequeue(identifier: "\(_type)", for: indexPath) as! T
     }
 }
 
-
-protocol CellAdviser {
-    var cellIdetifier: String { get }
-    func advise(cell: UICollectionViewCell, vm: VM)
-}
-
-class TypedCellAdviser<T:VM, C: Cell >: CellAdviser  where C: UICollectionViewCell, C.ViewModel == T {
-
-    let cellIdetifier: String = ""
-    
-    func advise(cell: UICollectionViewCell, vm: VM) {
-        if let typedCell = cell as? C, let typedVM = vm as? T {
-            typedCell.reuseBag.dispose()
-            typedCell.advise(vm: typedVM)
-        }
-    }
-}
-
-
-enum ValueInfo {
+public enum ValueInfo {
     case const(CGFloat)
     case percent(CGFloat)
     case denom(num: Int)
@@ -115,7 +89,7 @@ extension ValueInfo {
     }
 }
 
-struct SizeInfo {
+public struct SizeInfo {
     let width: ValueInfo
     let height: ValueInfo
     init (width: ValueInfo  = ValueInfo.full, height:ValueInfo  = ValueInfo.const(75)) {
@@ -123,8 +97,6 @@ struct SizeInfo {
         self.height = height
     }
 }
-
-
 
 extension SizeInfo {
     func size(from container: CGSize) -> CGSize {
@@ -148,39 +120,54 @@ extension SizeInfo {
     }
 }
 
-struct DataInfo {
+struct DataInfo<Item> {
+    let cell: UICollectionViewCell.Type
+    let sizeInfo: SizeInfo
+    let adviser: (UICollectionViewCell, Item)->()
     
 }
 
-public struct DS<Item: VM>: CollectionViewBond {
-    func register<T:VM, C: Cell>(vm: T.Type,  cell: C.Type) where C: UICollectionViewCell, C.ViewModel == T {
+public class DS<Item>: CollectionViewBond {
+    
+    func register<T, C: UICollectionViewCell>(data: T.Type, cell: C.Type, sizeInfo: SizeInfo, adviser: @escaping (C, T)->() )  {
+        dataInfo["\(data)"] = DataInfo<Item>(cell: cell, sizeInfo: sizeInfo) { (cell: UICollectionViewCell, item: Item) in
+            adviser(cell as! C, item as! T)
+        }
+    }
+    public init(){
         
     }
-    
-    
-    func register<T, C: Cell, V: VM>(data: T.Type,  cell: C.Type, lazy: (T)->V) where C: UICollectionViewCell, C.ViewModel == T {
-        
-        
-        
+    public func register<C: UICollectionViewCell>(cell: C.Type, sizeInfo: SizeInfo) where C: Cell  {
+        register(data: C.ViewModel.self, cell: C.self, sizeInfo: sizeInfo) { cell, vm in
+            cell.reuseBag.dispose()
+            cell.advise(vm: vm)
+        }
     }
+
+    public func register<T,C: UICollectionViewCell>(data:T.Type, cell: C.Type, sizeInfo: SizeInfo, factory: @escaping (T)->C.ViewModel) where C: Cell  {
+        
+        register(data: data, cell: cell, sizeInfo: sizeInfo, adviser: { cell, vm in
+            cell.reuseBag.dispose()
+            cell.advise(vm: factory(vm))
+        })
     
+    }
     
     public typealias DataSource = Array<Item>
-    private var advisers = Dictionary<String, CellAdviser>()
+    private var dataInfo = Dictionary<String, DataInfo<Item>>()
    
     public func cellForRow(at indexPath: IndexPath, collectionView: UICollectionView, dataSource: DataSource) -> UICollectionViewCell {
         
         let vm = dataSource[indexPath]
-        let adviser = advisers["\(type(of: vm))"]!
-        
-        let cell = collectionView.dequeue(identifier: adviser.cellIdetifier, for: indexPath)
-        adviser.advise(cell: cell, vm: vm)
+        guard let info = dataInfo["\(type(of: vm))"] else {
+            fatalError("Unregistered data typf of: \(type(of: vm))")
+        }
+        let cell = collectionView.dequeue(identifier: "\(info.cell)", for: indexPath)
+        info.adviser(cell, vm)
         
         return cell
     }
 }
-
-
 
 extension Array {
     subscript(indexPath: IndexPath) -> Element {

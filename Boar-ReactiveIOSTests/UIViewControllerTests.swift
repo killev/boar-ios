@@ -21,7 +21,14 @@ public class ModernCtrlVC: VCService {
 }
 
 
-public class ModernCtrl: UIViewController, VCLifeCycle, Cell {
+protocol Controller {
+    
+}
+
+public class ModernCtrl: UIViewController, VCLifeCycle {
+    
+    
+    
     
     public func advise(viewModel: ModernCtrlVC) {
         
@@ -44,7 +51,7 @@ class UIViewControllerTests: XCTestCase {
     func testExample() {
         UIViewController.setup()
         let ctrl = ModernCtrl()
-        ctrl._vm = ModernCtrlVC()
+        //ctrl._vm = ModernCtrlVC()
         let v = ctrl.view
         ctrl.loadView()
     }

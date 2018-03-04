@@ -9,15 +9,6 @@
 import Foundation
 
 struct dynamicProperty<O, T> {
-//    func ROProperty<T>(object: Any, _ key: UnsafeRawPointer, factory: ()->T) -> T {
-//        if let result = objc_getAssociatedObject(object, key) {
-//            return result as! T
-//        } else {
-//            let result = factory()
-//            objc_setAssociatedObject(object, key, result, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-//            return result
-//        }
-//    }
     
     private let key: UnsafeRawPointer
     private let object: O
@@ -49,9 +40,4 @@ func dynamicROProperty<T: AnyObject>(object: Any, _ key: UnsafeRawPointer, facto
     }
 }
 
-func dynamicGetProperty<T>(object: Any, _ key: UnsafeRawPointer) -> T? {
-    return objc_getAssociatedObject(object, key) as? T
-}
-func dynamicSetProperty<T>(object: Any, _ key: UnsafeRawPointer, obj: T?) {
-    objc_setAssociatedObject(object, key, obj, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-}
+

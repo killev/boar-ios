@@ -105,7 +105,7 @@ public protocol VCLifeCycle {
 //    }
 //}
 
-public extension VCLifeCycle where Self: UIViewController, Self: Cell {
+public extension VCLifeCycle where Self: UIViewController {
     func viewDidLoadImpl() {
      //   advise(viewModel: viewModel)
     }
@@ -126,6 +126,7 @@ extension ReactiveExtensions where Base: UIViewController {
             SafePublishSubject<UIViewController>()
         }
     }
+    
     fileprivate
     var viewDidLoadPromise: Promise<UIViewController, NSError> {
         return dynamicROProperty(object: self, &ReactiveExtensionKeys.viewWillAppearKey){

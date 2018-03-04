@@ -39,9 +39,7 @@ public extension DBContext {
         driver.delete()
     }
     
-    public func fetch<T: DBEntityProtocol>(_ type: T.Type, initial: NSPredicate, order: [(String,Bool)])-> CoreDataFetchedObservable<T> where T: Entity{
-        return driver.fetch(type, initial: initial, order: order)
-    }
+   
     
     static func update<T: DBEntityProtocol>(_ type: T.Type, obj: T, update: @escaping (T) throws -> T)-> Operation where T : Entity {
         
@@ -55,13 +53,15 @@ public extension DBContext {
     }
     
     static func delete<T:DBEntityProtocol>(_ type: T.Type, obj: T)-> Operation where T : CoreDataDriver.Entity {
-        
         return CoreDataDriver.delete(type, obj: obj)
-        
     }
     
     static func delete<T:DBEntityProtocol>(_ type: T.Type, pred: NSPredicate)-> Operation where T : Entity {
-        
         return CoreDataDriver.delete(type, pred: pred)
+    }
+    
+    //Observing or long pulling
+    public func fetch<T: DBEntityProtocol>(_ type: T.Type, initial: NSPredicate, order: [(String,Bool)])-> CoreDataFetchedObservable<T> where T: Entity{
+        return driver.fetch(type, initial: initial, order: order)
     }
 }

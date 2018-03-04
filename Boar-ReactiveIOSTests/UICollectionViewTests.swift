@@ -15,6 +15,11 @@ class SuperVM: VM {
 }
 
 class SuperCell : UICollectionViewCell, Cell {
+    
+    func advise(vm: SuperVM) {
+        
+    }
+
     typealias ViewModel = SuperVM
     
 }
@@ -34,10 +39,13 @@ class UICollectionViewTests: XCTestCase {
         UIViewController.setup()
         
         let arr = MutableObservableArray<VM>([])
-        let ds = DS<VM>()
+        let ds = DS<String>()
+    
         let collectionView = UICollectionView()
         collectionView.register(SuperCell.self)
-        arr.bind(to: collectionView, using: ds)
+        
+//        collectionView.register(SuperCell.self)
+//        arr.bind(to: collectionView, using: ds)
 
     }
     
