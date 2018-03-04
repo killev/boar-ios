@@ -128,4 +128,40 @@ class DBContextCoreDataTests: XCTestCase {
         }
     }
     
+    func testDelete() {
+
+        create()
+        let futureAllEntity = context.findAll(TestEntity.self)
+
+        let delete = futureAllEntity
+            .flatMap { res in
+                return self.context.perform {
+                    [DBContext.delete(TestEntity.self, obj: res.first!)]
+                }
+        }
+        
+        self.XCTAssertFutureSuccess("Should delete 1 element", future: delete){ res in
+            XCTAssertEqual(1, res.deleted.count)
+        }
+        self.XCTAssertFutureSuccess("Shouldn't have any elements", future: self.context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(0, res.count)
+        }
+    }
+    
+    func testDeleteWithPred() {
+        
+        create()
+        
+        let delete = self.context.perform {
+            return [DBContext.delete(TestEntity.self, pred: NSPredicate(value: true))]
+        }
+        
+        self.XCTAssertFutureSuccess("Should delete 1 element", future: delete){ res in
+            XCTAssertEqual(1, res.deleted.count)
+        }
+        self.XCTAssertFutureSuccess("Shouldn't have any elements", future: self.context.findAll(TestEntity.self)){ res in
+            XCTAssertEqual(0, res.count)
+        }
+    }
+    
 }
