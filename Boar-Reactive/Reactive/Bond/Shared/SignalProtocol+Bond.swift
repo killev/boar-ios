@@ -6,7 +6,6 @@
 //  Copyright © 2016 Swift Bond. All rights reserved.
 //
 
-import ReactiveKit
 
 extension SignalProtocol {
 

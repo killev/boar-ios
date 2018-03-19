@@ -23,7 +23,6 @@
 //
 
 import Foundation
-import ReactiveKit
 
 public protocol DataSourceProtocol {
     var numberOfSections: Int { get }

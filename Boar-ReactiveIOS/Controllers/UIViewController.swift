@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveKit
 
 public protocol VCService {
     func reload()

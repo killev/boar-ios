@@ -25,7 +25,6 @@
 #if os(macOS)
 
 import AppKit
-import ReactiveKit
 
 fileprivate extension NSControl {
 

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Bond
-import ReactiveKit
 import CoreData
 
 //this hack fixes compilation crash

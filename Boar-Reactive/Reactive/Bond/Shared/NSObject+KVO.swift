@@ -23,7 +23,6 @@
 //
 
 import Foundation
-import ReactiveKit
 
 public extension NSObject {
 

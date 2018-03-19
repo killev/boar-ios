@@ -25,7 +25,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 public extension ReactiveExtensions where Base: UISegmentedControl {
 

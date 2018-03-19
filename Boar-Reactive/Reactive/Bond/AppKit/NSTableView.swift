@@ -9,7 +9,6 @@
 #if os(macOS)
 
 import AppKit
-import ReactiveKit
 
 public extension ReactiveExtensions where Base: NSTableView {
 

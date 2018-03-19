@@ -9,7 +9,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 extension ReactiveExtensions where Base: Deallocatable, Base: UIAccessibilityIdentification {
 

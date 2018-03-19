@@ -26,7 +26,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 extension UIGestureRecognizer: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }

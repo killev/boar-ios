@@ -22,58 +22,23 @@
 //  THE SOFTWARE.
 //
 
-public protocol ResultProtocol {
-  associatedtype Value
+import Foundation
 
-  var value: Value? { get }
-  var error: Error? { get }
-}
+extension Property {
 
-/// An enum representing either a failure or a success.
-public enum Result<T>: CustomStringConvertible {
-
-  case success(T)
-  case failure(Error)
-
-  /// Constructs a result with a success value.
-  public init(_ value: T) {
-    self = .success(value)
-  }
-
-  /// Constructs a result with an error.
-  public init(_ error: Error) {
-    self = .failure(error)
-  }
-
-  public var description: String {
-    switch self {
-    case let .success(value):
-      return ".success(\(value))"
-    case let .failure(error):
-      return ".failure(\(error))"
+    /// Transform the `getter` and `setter` by applying a `transform` on them.
+    public func bidirectionalMap<U>(to getTransform: @escaping (Element) -> U,
+                                    from setTransform: @escaping (U) -> Element) -> DynamicSubject<U> {
+        return DynamicSubject<U>(
+            target: self,
+            signal: eraseType(),
+            context: .immediate,
+            get: { (property) -> U in
+                return getTransform(property.value)
+            },
+            set: { (propery, value) in
+                propery.value = setTransform(value)
+            }
+        )
     }
-  }
-}
-
-extension Result: ResultProtocol {
-
-  public var value: T? {
-    if case .success(let value) = self {
-      return value
-    } else {
-      return nil
-    }
-  }
-
-  public var error: Error? {
-    if case .failure(let error) = self {
-      return error
-    } else {
-      return nil
-    }
-  }
-
-  public var unbox: Result<T> {
-    return self
-  }
 }

@@ -25,7 +25,6 @@
 #if os(iOS)
 
 import UIKit
-import ReactiveKit
 
 public extension ReactiveExtensions where Base: UISwitch {
 

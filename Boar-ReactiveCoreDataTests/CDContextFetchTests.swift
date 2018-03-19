@@ -9,8 +9,6 @@
 import Foundation
 import Boar_ReactiveCoreData
 import XCTest
-import Bond
-import ReactiveKit
 
 class CDContextFetchTests: XCTestCase {
 //    

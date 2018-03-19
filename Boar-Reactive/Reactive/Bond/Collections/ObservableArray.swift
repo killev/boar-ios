@@ -23,8 +23,6 @@
 //
 
 import Foundation
-import Differ
-import ReactiveKit
 
 public enum ObservableArrayChange {
     case reset

@@ -25,7 +25,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 extension UINavigationItem: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }

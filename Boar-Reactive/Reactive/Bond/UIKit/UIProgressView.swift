@@ -24,7 +24,6 @@
 
 #if os(iOS) || os(tvOS)
 
-import ReactiveKit
 import UIKit
 
 public extension ReactiveExtensions where Base: UIProgressView {

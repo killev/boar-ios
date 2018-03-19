@@ -23,8 +23,6 @@
 //
 
 import Foundation
-import ReactiveKit
-import Differ
 
 public enum Observable2DArrayChange {
     case reset
@@ -538,49 +536,6 @@ extension MutableObservable2DArray where Item: Equatable, SectionMetadata: Equat
         } else {
             replace(with: array)
         }
-    }
-}
-
-fileprivate struct NestedBatchUpdate {
-    let itemDeletions: [IndexPath]
-    let itemInsertions: [IndexPath]
-    let itemMoves: [(from: IndexPath, to: IndexPath)]
-    let sectionDeletions: IndexSet
-    let sectionInsertions: IndexSet
-    let sectionMoves: [(from: Int, to: Int)]
-
-    init(diff: NestedExtendedDiff) {
-
-        var itemDeletions: [IndexPath] = []
-        var itemInsertions: [IndexPath] = []
-        var itemMoves: [(IndexPath, IndexPath)] = []
-        var sectionDeletions: IndexSet = []
-        var sectionInsertions: IndexSet = []
-        var sectionMoves: [(from: Int, to: Int)] = []
-
-        diff.forEach { element in
-            switch element {
-            case let .deleteElement(at, section):
-                itemDeletions.append(IndexPath(item: at, section: section))
-            case let .insertElement(at, section):
-                itemInsertions.append(IndexPath(item: at, section: section))
-            case let .moveElement(from, to):
-                itemMoves.append((IndexPath(item: from.item, section: from.section), IndexPath(item: to.item, section: to.section)))
-            case let .deleteSection(at):
-                sectionDeletions.insert(at)
-            case let .insertSection(at):
-                sectionInsertions.insert(at)
-            case let .moveSection(move):
-                sectionMoves.append(move)
-            }
-        }
-
-        self.itemInsertions = itemInsertions
-        self.itemDeletions = itemDeletions
-        self.itemMoves = itemMoves
-        self.sectionMoves = sectionMoves
-        self.sectionInsertions = sectionInsertions
-        self.sectionDeletions = sectionDeletions
     }
 }
 

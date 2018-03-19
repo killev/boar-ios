@@ -22,7 +22,6 @@
 //  THE SOFTWARE.
 //
 
-import ReactiveKit
 import Foundation
 
 public typealias DynamicSubject<Element> = DynamicSubject2<Element>

@@ -23,7 +23,6 @@
 //
 
 import Foundation
-import ReactiveKit
 
 public extension ReactiveExtensions where Base: NotificationCenter {
 

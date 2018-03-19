@@ -8,8 +8,7 @@
 
 import Foundation
 import Boar_ReactiveCoreData
-import Bond
-import ReactiveKit
+
 
 extension TestEntity : DBEntityProtocol{
  

@@ -22,6 +22,5 @@
 //  THE SOFTWARE.
 //
 
-import ReactiveKit
 
 public typealias Observable<Element> = Property<Element>

@@ -23,7 +23,6 @@
 //
 
 import Foundation
-import ReactiveKit
 
 public enum ObservableDictionaryEventKind<Key: Hashable, Value> {
     case reset

@@ -9,10 +9,6 @@
 import Foundation
 import ObjectiveC
 
-#if !BUILDING_WITH_XCODE
-    import BNDProtocolProxyBase
-#endif
-
 internal extension BNDInvocation {
 
     func readArgument<T>(_ index: Int) -> T {

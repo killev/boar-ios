@@ -25,7 +25,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 extension UIBarItem: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }

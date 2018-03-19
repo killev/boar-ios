@@ -25,7 +25,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-import ReactiveKit
 
 public protocol CollectionViewBond {
     associatedtype DataSource: DataSourceProtocol

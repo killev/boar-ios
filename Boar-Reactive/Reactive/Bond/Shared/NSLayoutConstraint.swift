@@ -28,8 +28,6 @@
     import UIKit
 #endif
 
-import ReactiveKit
-
 extension NSLayoutConstraint: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }
 }

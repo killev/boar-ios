@@ -105,7 +105,7 @@ public func materialize(_ scope: ((Error?) -> Void) -> Void) -> Future<Void> {
 /// Short-hand for `lhs.recover(rhs())`
 /// `rhs` is executed according to the default threading model (see README.md)
 public func ?? <T>(_ lhs: Future<T>, rhs: @autoclosure @escaping  () -> T) -> Future<T> {
-    return lhs.recover(context: DefaultThreadingModel(), task: { _ in
+    return lhs.recover(context: .defaultContext, task: { _ in
         return rhs()
     })
 }
@@ -113,7 +113,7 @@ public func ?? <T>(_ lhs: Future<T>, rhs: @autoclosure @escaping  () -> T) -> Fu
 /// Short-hand for `lhs.recoverWith(rhs())`
 /// `rhs` is executed according to the default threading model (see README.md)
 public func ?? <T>(_ lhs: Future<T>, rhs: @autoclosure @escaping () -> Future<T>) -> Future<T> {
-    return lhs.recoverWith(context: DefaultThreadingModel(), task: { _ in
+    return lhs.recoverWith(context: .defaultContext, task: { _ in
         return rhs()
     })
 }

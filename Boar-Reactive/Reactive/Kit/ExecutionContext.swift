@@ -48,13 +48,13 @@ public struct ExecutionContext {
   }
 
   /// Execution context that executes immediately and synchronously on current thread or queue.
-  public static var immediate: ExecutionContext {
+  public static let immediate: ExecutionContext = {
     return ExecutionContext { block in block () }
-  }
+  }()
 
   /// Executes immediately and synchronously if current thread is main thread. Otherwise executes
   /// asynchronously on main dispatch queue (main thread).
-  public static var immediateOnMain: ExecutionContext {
+  public static let immediateOnMain: ExecutionContext = {
     return ExecutionContext { block in
       if Thread.isMainThread {
         block()
@@ -62,12 +62,18 @@ public struct ExecutionContext {
         DispatchQueue.main.async(execute: block)
       }
     }
-  }
+  }()
+    public static var defaultContext: ExecutionContext {
+        if Thread.isMainThread {
+            return main
+        }
+        return global()
+    }
 
   /// Execution context bound to main dispatch queue.
-  public static var main: ExecutionContext {
+  public static let main: ExecutionContext = {
     return DispatchQueue.main.context
-  }
+  }()
 
   /// Execution context bound to global dispatch queue.
   @available(macOS 10.10, *)
@@ -85,6 +91,32 @@ public struct ExecutionContext {
       updating = false
     }
   }
+    
+    
+    public static let maxStackDepthExecutionContext: ExecutionContext = ExecutionContext({ task in
+        struct Static {
+            static let taskDepthKey = "com.bolts.TaskDepthKey"
+            static let maxTaskDepth = 20
+        }
+        
+        let localThreadDictionary = Thread.current.threadDictionary
+        
+        var previousDepth: Int
+        if let depth = localThreadDictionary[Static.taskDepthKey] as? Int {
+            previousDepth = depth
+        } else {
+            previousDepth = 0
+        }
+        
+        if previousDepth > 20 {
+            DispatchQueue.global().async(execute: task)
+        } else {
+            localThreadDictionary[Static.taskDepthKey] = previousDepth + 1
+            task()
+            localThreadDictionary[Static.taskDepthKey] = previousDepth
+        }
+    })
+    
 }
 
 public extension DispatchQueue {
@@ -118,8 +150,9 @@ public extension DispatchQueue {
 
 // MARK: Compatibility
 
-@available(*, deprecated, message: "Use ExecutionContext.immediate instead.")
-public let ImmediateExecutionContext: ExecutionContext = .immediate
+//@available(*, deprecated, message: "Use ExecutionContext.immediate instead.")
+//public let ImmediateExecutionContext: ExecutionContext = .immediate
+//
+//@available(*, deprecated, message: "Use ExecutionContext.immediateOnMain instead.")
+//public let ImmediateOnMainExecutionContext: ExecutionContext = .immediateOnMain
 
-@available(*, deprecated, message: "Use ExecutionContext.immediateOnMain instead.")
-public let ImmediateOnMainExecutionContext: ExecutionContext = .immediateOnMain

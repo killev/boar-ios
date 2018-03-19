@@ -25,7 +25,6 @@
 #if os(macOS)
 
 import AppKit
-import ReactiveKit
 
 extension NSMenuItem: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }

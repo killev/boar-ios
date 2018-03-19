@@ -8,7 +8,6 @@
 
 import XCTest
 import Boar_ReactiveIOS
-import Bond
 
 class SuperVM: VM {
     

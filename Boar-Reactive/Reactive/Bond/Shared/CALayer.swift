@@ -23,7 +23,6 @@
 //
 
 import QuartzCore
-import ReactiveKit
 
 extension CALayer: BindingExecutionContextProvider {
     public var bindingExecutionContext: ExecutionContext { return .immediateOnMain }

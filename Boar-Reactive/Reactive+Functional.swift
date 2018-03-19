@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import ReactiveKit
-import Bond
 
 public extension SignalProtocol where Element == Void {
     public func with<U: AnyObject>(weak left: U) -> Signal<U> {
@@ -112,7 +110,7 @@ public extension SignalProtocol {
 }
 
 public extension Future {
-    public func on(_ context: @escaping ExecutionContext) -> Future<T> {
+    public func on(_ context: ExecutionContext) -> Future<T> {
         return map(context) { $0 }
     }
     var val: Property<T?> {
@@ -235,22 +233,6 @@ public extension SignalProtocol {
                     observer.completed()
                 }
             }
-        }
-    }
-}
-public extension DispatchQueue{
-    
-    static func delay(_ delay: DispatchTimeInterval)->Future<Void>{
-        return Future<Void>(value: (), delay: delay)
-    }
-}
-
-public extension Promise {
-    func materialize(from f: (() throws -> T) ){
-        do {
-            success(try f())
-        }catch {
-            failure(error)
         }
     }
 }

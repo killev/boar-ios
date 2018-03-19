@@ -22,7 +22,6 @@
 //  THE SOFTWARE.
 //
 
-import ReactiveKit
 
 public struct Bond<Element>: BindableProtocol {
 

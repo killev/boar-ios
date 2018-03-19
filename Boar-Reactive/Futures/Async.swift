@@ -102,11 +102,11 @@ open class Async<Value>: AsyncType {
     /// If no context is given, the behavior is defined by the default threading model (see README.md)
     /// Returns self
     @discardableResult
-    open func onComplete(_ context: @escaping ExecutionContext = DefaultThreadingModel(), callback: @escaping (Value) -> Void) -> Self {
+    open func onComplete(_ context: ExecutionContext = .defaultContext, callback: @escaping (Value) -> Void) -> Self {
         let wrappedCallback : (Value) -> Void = { [weak self] value in
             let s = self
-            context {
-                s?.callbackExecutionSemaphore.context {
+            context.execute {
+                s?.callbackExecutionSemaphore.context.execute {
                     callback(value)
                 }
                 return

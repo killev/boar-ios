@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Bond
-import ReactiveKit
 
 public protocol Configurable {
     associatedtype Config

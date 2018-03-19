@@ -6,19 +6,12 @@
 //  Copyright © 2018 Peter Ovchinnikov. All rights reserved.
 //
 
-import ReactiveKit
-
-
-
 enum VCStyle {
     case tab(name: String)
     case root(name: String, data: String)
     case push(name: String, data: String)
     case present(name: String, data: String)
 }
-
-
-
 
 class Router {
     
