@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import Boar_Reactive
 
 //this hack fixes compilation crash
 fileprivate func createFR<T:NSManagedObject>(context: NSManagedObjectContext, predicate: NSPredicate, order: [(String,Bool)])->NSFetchedResultsController<T> {

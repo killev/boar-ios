@@ -7,9 +7,10 @@
 //
 
 import XCTest
+import Boar_Reactive
 
 extension XCTestCase{
-    func XCTAssertFutureSuccess<V>(file: StaticString = #file, line: UInt = #line, _ message: String, timeout: TimeInterval = 10, future: @autoclosure () -> Future<V, NSError>, check:((V)->Void)? = nil) {
+    func XCTAssertFutureSuccess<V>(file: StaticString = #file, line: UInt = #line, _ message: String, timeout: TimeInterval = 10, future: @autoclosure () -> Future<V>, check:((V)->Void)? = nil) {
         
         let token = InvalidationToken()
         
@@ -46,7 +47,7 @@ extension XCTestCase{
 //    }
 //
 //
-    func XCTAssertFutureFailure<V>(_ message: String, timeout: TimeInterval = 10, future: Future<V, NSError>){
+    func XCTAssertFutureFailure<V>(_ message: String, timeout: TimeInterval = 10, future: Future<V>){
         let token = InvalidationToken()
         let expectation = self.expectation(description: message + " - Expectation")
         future.onComplete(token.validContext){result in

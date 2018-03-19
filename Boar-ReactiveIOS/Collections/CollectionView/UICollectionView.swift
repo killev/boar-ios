@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Boar_Reactive
 
 public protocol Configurable {
     associatedtype Config

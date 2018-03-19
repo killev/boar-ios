@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import Boar_Reactive
 
 protocol DataDriver {
     associatedtype Entity
@@ -61,13 +62,13 @@ public final class CoreDataDriver {
             try? FileManager.default.removeItem(at: url)
         }
     }
-    public func find<T:NSManagedObject>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T], NSError> {
+    public func find<T:NSManagedObject>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T]> {
         return backgroundContext.async{ context in
             return try context.find(type, pred: pred, order: order, count: count)
         }
     }
     
-    public func perform(operations: @escaping () -> [Operation] ) -> Future<DBContext.ChangedContext, NSError>{
+    public func perform(operations: @escaping () -> [Operation] ) -> Future<DBContext.ChangedContext>{
         return сoordinatorContext.transaction{context -> DBContext.ChangedContext in
             try operations().forEach{ try $0(context) }
             return DBContext.ChangedContext(inserted: context.insertedObjects,

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Boar_Reactive
 
 public protocol ReuseDisposeBagProvider {
     var reuseBag: DisposeBag { get }

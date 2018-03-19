@@ -7,23 +7,22 @@
 //
 
 import CoreData
-
-
+import Boar_Reactive
 
 extension NSManagedObjectContext {
     
     @discardableResult
-    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
+    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T> {
+        let promise = Promise<T>()
         self.perform{
-            promise.materialize{ try block(self) }
+            promise.complete( materialize{ try block(self) })
         }
         return promise.future
     }
     
     @discardableResult
-    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) -> Future<T, NSError>) -> Future<T, NSError> {
-        let promise = Promise<T, NSError>()
+    func async<T>(_ block: @escaping (_ context:NSManagedObjectContext) -> Future<T>) -> Future<T> {
+        let promise = Promise<T>()
         self.perform{
             promise.completeWith( block(self) )
         }
@@ -31,7 +30,7 @@ extension NSManagedObjectContext {
     }
     
     @discardableResult
-    func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T, NSError> {
+    func transaction<T>(_ block: @escaping (_ context:NSManagedObjectContext) throws -> T) -> Future<T> {
         return self.async{ context in
             do  {
                 let res = try block(context)
@@ -56,9 +55,9 @@ extension NSManagedObjectContext {
     
     @discardableResult
     func sync<T>(_ block: (_ context:NSManagedObjectContext) throws -> T) throws -> T{
-        var res: Result<T,NSError>!
+        var res: Result<T>!
         self.performAndWait{
-            res = Result<T,NSError>(attempt: { try block(self)} )
+            res = Result<T>(attempt: { try block(self)} )
         }
         if let val = res.value {
             return val

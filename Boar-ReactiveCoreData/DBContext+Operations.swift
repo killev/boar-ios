@@ -8,14 +8,15 @@
 
 import Foundation
 import CoreData
+import Boar_Reactive
 
 public extension DBContext {
     
-    public func find<T:DBEntityProtocol>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T], NSError> where T : CoreDataDriver.Entity {
+    public func find<T:DBEntityProtocol>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T]> where T : CoreDataDriver.Entity {
         return driver.find(T.self, pred: pred, order: order, count: count)
     }
     
-    public func findAll<T:DBEntityProtocol>(_ type: T.Type)->Future<[T], NSError> where T : Entity {
+    public func findAll<T:DBEntityProtocol>(_ type: T.Type)->Future<[T]> where T : Entity {
         return find(type, pred: NSPredicate(value: true), order: [], count: nil)
     }
     
@@ -31,7 +32,7 @@ public extension DBContext {
         return CoreDataDriver.create(T.self, setup: setup)
     }
     
-    public func perform(operations: @escaping () -> [Operation]) -> Future<DBContext.ChangedContext, NSError> {
+    public func perform(operations: @escaping () -> [Operation]) -> Future<DBContext.ChangedContext> {
         return driver.perform(operations: operations)
     }
     

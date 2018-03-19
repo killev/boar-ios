@@ -8,6 +8,7 @@
 
 import XCTest
 import Boar_ReactiveIOS
+import Boar_Reactive
 
 class SuperVM: VM {
     

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Boar_Reactive
 import Boar_ReactiveCoreData
 import XCTest
 

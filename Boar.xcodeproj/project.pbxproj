@@ -71,12 +71,8 @@
 		D00E60882012B83000771202 /* CoreDataFetchedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60872012B83000771202 /* CoreDataFetchedObservable.swift */; };
 		D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
-		D00E608C2012BB1500771202 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD4200D2D92006E8C36 /* Bond.framework */; };
-		D00E608D2012BB1500771202 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD6200D2D92006E8C36 /* BrightFutures.framework */; };
-		D00E608E2012BB3500771202 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD1200D2D92006E8C36 /* Result.framework */; };
 		D00E60932012CC5400771202 /* CoreDataDriver+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */; };
 		D00E6097201353F300771202 /* CDContextFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E6096201353F300771202 /* CDContextFetchTests.swift */; };
-		D00E6098201355BA00771202 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D001ADD0200D2D92006E8C36 /* ReactiveKit.framework */; };
 		D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */; };
 		D088857C202493EF001F6D4F /* ReContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857B202493EF001F6D4F /* ReContext.swift */; };
 		D088857E2024A266001F6D4F /* CoreDataDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857D2024A266001F6D4F /* CoreDataDriver.swift */; };
@@ -189,6 +185,8 @@
 		D0F6888520605BE400743D99 /* Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687E62060533700743D99 /* Patch.swift */; };
 		D0F6888620605BE400743D99 /* Patch+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687E92060533800743D99 /* Patch+Apply.swift */; };
 		D0F6888720605BE400743D99 /* Patch+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687EA2060533800743D99 /* Patch+Sort.swift */; };
+		D0F68888206063BF00743D99 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
+		D0F68889206063D200743D99 /* Boar_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E60612012A40800771202 /* Boar_Reactive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -515,6 +513,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F68888206063BF00743D99 /* Boar_Reactive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +534,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F68889206063D200743D99 /* Boar_Reactive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,10 +562,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00E6098201355BA00771202 /* ReactiveKit.framework in Frameworks */,
-				D00E608E2012BB3500771202 /* Result.framework in Frameworks */,
-				D00E608C2012BB1500771202 /* Bond.framework in Frameworks */,
-				D00E608D2012BB1500771202 /* BrightFutures.framework in Frameworks */,
 				D00E603120128ABB00771202 /* Boar_ReactiveCoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1458,13 +1454,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Differ.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",

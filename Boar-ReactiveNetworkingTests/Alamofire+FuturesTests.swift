@@ -45,7 +45,7 @@ class AlamofireFuturesTests: XCTestCase {
             .responseArray(GH_Issue.self)
         
         XCTAssertFutureSuccess("testSimple", future: issues){ res in
-            XCTAssertEqual(1, res.count)
+            XCTAssertEqual(2, res.count)
         }
     }
 }

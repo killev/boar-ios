@@ -8,11 +8,12 @@
 
 import Foundation
 import RealmSwift
+import Boar_Reactive
 
 final public class ReContext {
     let realm = try! Realm()
     
-    public func find<T:Object>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T], NSError> {
+    public func find<T:Object>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T]> {
         
         let res:Array<T> = realm.objects(T.self).filter(pred).map{ $0 as T }
         

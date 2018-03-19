@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Boar_Reactive
 
 public protocol VCService {
     func reload()
@@ -125,14 +126,14 @@ extension ReactiveExtensions where Base: UIViewController {
         }
     }
     
-    fileprivate
-    var viewDidLoadPromise: Promise<UIViewController, NSError> {
+    
+    fileprivate var viewDidLoadPromise: Promise<UIViewController> {
         return dynamicROProperty(object: self, &ReactiveExtensionKeys.viewWillAppearKey){
-            Promise<UIViewController, NSError> ()
+            Promise<UIViewController> ()
         }
     }
     
-    var viewDidLoad: Future<UIViewController, NSError> {
+    var viewDidLoad: Future<UIViewController> {
         return viewDidLoadPromise.future
     }
 }
