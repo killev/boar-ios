@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-import BrightFutures
 import Boar_Reactive
 
 

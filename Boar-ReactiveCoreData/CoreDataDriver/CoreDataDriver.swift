@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-import BrightFutures
 
 protocol DataDriver {
     associatedtype Entity

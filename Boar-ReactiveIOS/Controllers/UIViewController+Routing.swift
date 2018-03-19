@@ -6,8 +6,6 @@
 //  Copyright © 2018 Peter Ovchinnikov. All rights reserved.
 //
 
-import BrightFutures
-
 extension UIViewController {
     
     @discardableResult

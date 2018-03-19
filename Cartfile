@@ -1,8 +1,5 @@
 # Reactive
-
-github "killev/Bond" "master"
-github "Thomvis/BrightFutures"
-
+    
 # Networking
 github "Alamofire/Alamofire"
 github "Alamofire/AlamofireImage"

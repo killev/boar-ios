@@ -6,7 +6,6 @@
 //  Copyright © 2018 Peter Ovchinnikov. All rights reserved.
 //
 
-import BrightFutures
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper

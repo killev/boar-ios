@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import BrightFutures
 
 extension XCTestCase{
     func XCTAssertFutureSuccess<V>(file: StaticString = #file, line: UInt = #line, _ message: String, timeout: TimeInterval = 10, future: @autoclosure () -> Future<V, NSError>, check:((V)->Void)? = nil) {

@@ -36,11 +36,11 @@ public protocol Controller: View {
 }
 
 public extension ReuseDisposeBagProvider where Self: View {
-   var reuseBag: DisposeBag { return dynamicProperty(self, &Keys.reuseBag).value{ DisposeBag () } }
+   var reuseBag: DisposeBag { return DynamicProperty(self, &Keys.reuseBag).value{ DisposeBag () } }
 }
 
 public extension DisposeBagProvider where Self: VM {
-    var bag: DisposeBag { return dynamicProperty(self, &Keys.bag).value{ DisposeBag () } }
+    var bag: DisposeBag { return DynamicProperty(self, &Keys.bag).value{ DisposeBag () } }
 }
 
 

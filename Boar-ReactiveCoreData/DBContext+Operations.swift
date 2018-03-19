@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import BrightFutures
 import CoreData
+
 public extension DBContext {
     
     public func find<T:DBEntityProtocol>(_ type: T.Type, pred: NSPredicate, order: [(String,Bool)], count: Int?)->Future<[T], NSError> where T : CoreDataDriver.Entity {

@@ -108,6 +108,25 @@
 		D08885802024A655001F6D4F /* DBContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857F2024A655001F6D4F /* DBContext+Operations.swift */; };
 		D08885832024B851001F6D4F /* CDTestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08885822024B851001F6D4F /* CDTestEntity.swift */; };
 		D0923FE320347E3100FB1185 /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0923FE220347E3100FB1185 /* UICollectionViewTests.swift */; };
+		D0F68765206028B000743D99 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F68764206028B000743D99 /* File.swift */; };
+		D0F6877A2060291700743D99 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687692060291600743D99 /* Errors.swift */; };
+		D0F6877B2060291700743D99 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6876A2060291600743D99 /* Future.swift */; };
+		D0F6877C2060291700743D99 /* AsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6876B2060291600743D99 /* AsyncType+ResultType.swift */; };
+		D0F6877D2060291700743D99 /* Dispatch+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6876C2060291600743D99 /* Dispatch+BrightFutures.swift */; };
+		D0F6877E2060291700743D99 /* AsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6876D2060291600743D99 /* AsyncType.swift */; };
+		D0F687802060291700743D99 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6876F2060291700743D99 /* Async.swift */; };
+		D0F687812060291700743D99 /* MutableAsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687702060291700743D99 /* MutableAsyncType+ResultType.swift */; };
+		D0F687822060291700743D99 /* SequenceType+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687712060291700743D99 /* SequenceType+BrightFutures.swift */; };
+		D0F687832060291700743D99 /* AsyncType+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687722060291700743D99 /* AsyncType+Debug.swift */; };
+		D0F687842060291700743D99 /* NSOperationQueue+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687732060291700743D99 /* NSOperationQueue+BrightFutures.swift */; };
+		D0F687852060291700743D99 /* InvalidationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687742060291700743D99 /* InvalidationToken.swift */; };
+		D0F687862060291700743D99 /* MutableAsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687752060291700743D99 /* MutableAsyncType.swift */; };
+		D0F687872060291700743D99 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687762060291700743D99 /* Promise.swift */; };
+		D0F687882060291700743D99 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687772060291700743D99 /* ExecutionContext.swift */; };
+		D0F687892060291700743D99 /* Number+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687782060291700743D99 /* Number+BrightFutures.swift */; };
+		D0F6878A2060291700743D99 /* Result+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F687792060291700743D99 /* Result+BrightFutures.swift */; };
+		D0F687932060296400743D99 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6878D2060296400743D99 /* Result.swift */; };
+		D0F687952060296400743D99 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6878F2060296400743D99 /* ResultProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +317,25 @@
 		D088857F2024A655001F6D4F /* DBContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBContext+Operations.swift"; sourceTree = "<group>"; };
 		D08885822024B851001F6D4F /* CDTestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTestEntity.swift; sourceTree = "<group>"; };
 		D0923FE220347E3100FB1185 /* UICollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTests.swift; sourceTree = "<group>"; };
+		D0F68764206028B000743D99 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D0F687692060291600743D99 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		D0F6876A2060291600743D99 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		D0F6876B2060291600743D99 /* AsyncType+ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AsyncType+ResultType.swift"; sourceTree = "<group>"; };
+		D0F6876C2060291600743D99 /* Dispatch+BrightFutures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dispatch+BrightFutures.swift"; sourceTree = "<group>"; };
+		D0F6876D2060291600743D99 /* AsyncType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncType.swift; sourceTree = "<group>"; };
+		D0F6876F2060291700743D99 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		D0F687702060291700743D99 /* MutableAsyncType+ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MutableAsyncType+ResultType.swift"; sourceTree = "<group>"; };
+		D0F687712060291700743D99 /* SequenceType+BrightFutures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+BrightFutures.swift"; sourceTree = "<group>"; };
+		D0F687722060291700743D99 /* AsyncType+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AsyncType+Debug.swift"; sourceTree = "<group>"; };
+		D0F687732060291700743D99 /* NSOperationQueue+BrightFutures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOperationQueue+BrightFutures.swift"; sourceTree = "<group>"; };
+		D0F687742060291700743D99 /* InvalidationToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidationToken.swift; sourceTree = "<group>"; };
+		D0F687752060291700743D99 /* MutableAsyncType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableAsyncType.swift; sourceTree = "<group>"; };
+		D0F687762060291700743D99 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		D0F687772060291700743D99 /* ExecutionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
+		D0F687782060291700743D99 /* Number+BrightFutures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+BrightFutures.swift"; sourceTree = "<group>"; };
+		D0F687792060291700743D99 /* Result+BrightFutures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+BrightFutures.swift"; sourceTree = "<group>"; };
+		D0F6878D2060296400743D99 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D0F6878F2060296400743D99 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +509,7 @@
 		D001ADAE200CF1C1006E8C36 /* Boar */ = {
 			isa = PBXGroup;
 			children = (
+				D0F687632060286000743D99 /* Futures */,
 				D001ADAF200CF1C1006E8C36 /* AppDelegate.swift */,
 				D001ADB1200CF1C1006E8C36 /* ViewController.swift */,
 				D001ADB3200CF1C1006E8C36 /* Main.storyboard */,
@@ -649,6 +688,9 @@
 		D00E60622012A40800771202 /* Boar-Reactive */ = {
 			isa = PBXGroup;
 			children = (
+				D0F687682060290700743D99 /* Result */,
+				D0F68767206028FA00743D99 /* Reactive */,
+				D0F68766206028D400743D99 /* Futures */,
 				D00E60632012A40800771202 /* Boar_Reactive.h */,
 				D00E60642012A40800771202 /* Info.plist */,
 				D00E607E2012A42600771202 /* Reactive+Functional.swift */,
@@ -679,6 +721,69 @@
 				D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */,
 			);
 			path = CoreDataDriver;
+			sourceTree = "<group>";
+		};
+		D0F687632060286000743D99 /* Futures */ = {
+			isa = PBXGroup;
+			children = (
+				D0F68764206028B000743D99 /* File.swift */,
+			);
+			path = Futures;
+			sourceTree = "<group>";
+		};
+		D0F68766206028D400743D99 /* Futures */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6876F2060291700743D99 /* Async.swift */,
+				D0F6876D2060291600743D99 /* AsyncType.swift */,
+				D0F687722060291700743D99 /* AsyncType+Debug.swift */,
+				D0F6876B2060291600743D99 /* AsyncType+ResultType.swift */,
+				D0F6876C2060291600743D99 /* Dispatch+BrightFutures.swift */,
+				D0F687692060291600743D99 /* Errors.swift */,
+				D0F687772060291700743D99 /* ExecutionContext.swift */,
+				D0F6876A2060291600743D99 /* Future.swift */,
+				D0F687742060291700743D99 /* InvalidationToken.swift */,
+				D0F687752060291700743D99 /* MutableAsyncType.swift */,
+				D0F687702060291700743D99 /* MutableAsyncType+ResultType.swift */,
+				D0F687732060291700743D99 /* NSOperationQueue+BrightFutures.swift */,
+				D0F687782060291700743D99 /* Number+BrightFutures.swift */,
+				D0F687762060291700743D99 /* Promise.swift */,
+				D0F687792060291700743D99 /* Result+BrightFutures.swift */,
+				D0F687712060291700743D99 /* SequenceType+BrightFutures.swift */,
+			);
+			path = Futures;
+			sourceTree = "<group>";
+		};
+		D0F68767206028FA00743D99 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6879820603A1200743D99 /* Bond */,
+				D0F6879720603A0B00743D99 /* Kit */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		D0F687682060290700743D99 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6878D2060296400743D99 /* Result.swift */,
+				D0F6878F2060296400743D99 /* ResultProtocol.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		D0F6879720603A0B00743D99 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		D0F6879820603A1200743D99 /* Bond */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bond;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1111,6 +1216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D001ADB2200CF1C1006E8C36 /* ViewController.swift in Sources */,
+				D0F68765206028B000743D99 /* File.swift in Sources */,
 				D001ADB0200CF1C1006E8C36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1198,6 +1304,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00E607F2012A42600771202 /* Reactive+Functional.swift in Sources */,
+				D0F687892060291700743D99 /* Number+BrightFutures.swift in Sources */,
+				D0F687852060291700743D99 /* InvalidationToken.swift in Sources */,
+				D0F6878A2060291700743D99 /* Result+BrightFutures.swift in Sources */,
+				D0F687872060291700743D99 /* Promise.swift in Sources */,
+				D0F687932060296400743D99 /* Result.swift in Sources */,
+				D0F6877C2060291700743D99 /* AsyncType+ResultType.swift in Sources */,
+				D0F687862060291700743D99 /* MutableAsyncType.swift in Sources */,
+				D0F6877A2060291700743D99 /* Errors.swift in Sources */,
+				D0F6877B2060291700743D99 /* Future.swift in Sources */,
+				D0F687952060296400743D99 /* ResultProtocol.swift in Sources */,
+				D0F687822060291700743D99 /* SequenceType+BrightFutures.swift in Sources */,
+				D0F687812060291700743D99 /* MutableAsyncType+ResultType.swift in Sources */,
+				D0F687802060291700743D99 /* Async.swift in Sources */,
+				D0F687882060291700743D99 /* ExecutionContext.swift in Sources */,
+				D0F687842060291700743D99 /* NSOperationQueue+BrightFutures.swift in Sources */,
+				D0F687832060291700743D99 /* AsyncType+Debug.swift in Sources */,
+				D0F6877E2060291700743D99 /* AsyncType.swift in Sources */,
+				D0F6877D2060291700743D99 /* Dispatch+BrightFutures.swift in Sources */,
 				D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,6 @@
 
 import Foundation
 import ReactiveKit
-import BrightFutures
 
 public protocol VCService {
     func reload()

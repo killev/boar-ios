@@ -8,7 +8,6 @@
 
 import Foundation
 import ReactiveKit
-import BrightFutures
 import Bond
 
 public extension SignalProtocol where Element == Void {
@@ -113,7 +112,7 @@ public extension SignalProtocol {
 }
 
 public extension Future {
-    public func on(_ context: @escaping BrightFutures.ExecutionContext) -> Future<T, E> {
+    public func on(_ context: @escaping ExecutionContext) -> Future<T> {
         return map(context) { $0 }
     }
     var val: Property<T?> {
@@ -132,8 +131,8 @@ public extension Future {
 }
 
 public extension Future {
-    func with<U: AnyObject>(weak obj: U) -> Future<(T,U), E> {
-        let res = Promise<(T, U), Value.Error>()
+    func with<U: AnyObject>(weak obj: U) -> Future<(T,U)> {
+        let res = Promise<(T, U)>()
         weak var weak: U? = obj
         self.onComplete(callback: { (result: Value) in
             result.analysis(
@@ -147,8 +146,8 @@ public extension Future {
         return res.future
     }
     
-    func with<U>(obj: U) -> Future<(T,U), E> {
-        let res = Promise<(T, U), Value.Error>()
+    func with<U>(obj: U) -> Future<(T,U)> {
+        let res = Promise<(T, U)>()
         
         self.onComplete(callback: { (result: Value) in
             result.analysis(
@@ -162,8 +161,8 @@ public extension Future {
 }
 
 public extension Future where T == Void {
-    func with<U: AnyObject>(weak obj: U) -> Future<U,E> {
-        let res = Promise<U, Value.Error>()
+    func with<U: AnyObject>(weak obj: U) -> Future<U> {
+        let res = Promise<U>()
         weak var weak: U? = obj
         self.onComplete(callback: { (result: Value) in
             result.analysis(
@@ -177,8 +176,8 @@ public extension Future where T == Void {
         return res.future
     }
     
-    func with<U>(obj: U) -> Future<U,E> {
-        let res = Promise<U, Value.Error>()
+    func with<U>(obj: U) -> Future<U> {
+        let res = Promise<U>()
         self.onComplete(callback: { (result: Value) in
             result.analysis(
                 ifSuccess: { res.success( obj ) },
@@ -219,7 +218,7 @@ public extension SignalProtocol where Element : OptionalProtocol {
 
 public extension SignalProtocol {
     
-    public func flatMap<U, E>(_ transform: @escaping (Element) -> Future<U, E>) -> Signal<U> {
+    public func flatMap<U>(_ transform: @escaping (Element) -> Future<U>) -> Signal<U> {
         return Signal { observer in
             var token = InvalidationToken()
             return self.observe { event in
@@ -241,8 +240,8 @@ public extension SignalProtocol {
 }
 public extension DispatchQueue{
     
-    static func delay<E:Swift.Error>(_ delay: DispatchTimeInterval)->Future<Void, E>{
-        return Future<Void, E>(value: (), delay: delay)
+    static func delay(_ delay: DispatchTimeInterval)->Future<Void>{
+        return Future<Void>(value: (), delay: delay)
     }
 }
 
@@ -251,7 +250,7 @@ public extension Promise {
         do {
             success(try f())
         }catch {
-            failure(error as! E)
+            failure(error)
         }
     }
 }

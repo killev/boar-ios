@@ -9,8 +9,6 @@ import XCTest
 import Alamofire
 import ObjectMapper
 import Boar_ReactiveNetworking
-import BrightFutures
-
 
 protocol Patchable {
     func patch(with: Dictionary<String, Any>) -> Self

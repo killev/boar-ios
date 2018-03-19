@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct dynamicProperty<O, T> {
+struct DynamicProperty<O, T> {
     
     private let key: UnsafeRawPointer
     private let object: O

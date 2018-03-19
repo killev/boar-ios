@@ -8,7 +8,6 @@
 
 import Foundation
 import RealmSwift
-import BrightFutures
 
 final public class ReContext {
     let realm = try! Realm()

@@ -7,7 +7,6 @@
 //
 
 import CoreData
-import BrightFutures
 
 public extension CoreDataDriver {
     static func update<T:NSManagedObject>(_ type: T.Type, obj: T, update: @escaping (T) throws -> T)-> Operation {

@@ -31,12 +31,12 @@ extension UICollectionView {
     
     fileprivate var configurers: Dictionary<String, Configurer> {
         get {
-            return dynamicProperty(self, &UICollectionView.configurersKey)
+            return DynamicProperty(self, &UICollectionView.configurersKey)
                 .value(initial: { NonHashableWrapper([:]) }).object
            
         }
         set {
-            dynamicProperty(self, &UICollectionView.configurersKey)
+            DynamicProperty(self, &UICollectionView.configurersKey)
                 .value(new: NonHashableWrapper(newValue))
         }
     }
