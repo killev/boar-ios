@@ -139,7 +139,7 @@ extension ObservableArrayBase: CustomDebugStringConvertible {
 extension ObservableArrayBase: Deallocatable {
 
     public var deallocated: Signal<Void> {
-        return subject.disposeBag.deallocated
+        return subject.bag.deallocated
     }
 }
 

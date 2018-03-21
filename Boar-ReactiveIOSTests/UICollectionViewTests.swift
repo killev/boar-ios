@@ -38,14 +38,14 @@ class UICollectionViewTests: XCTestCase {
     func testExample() {
         UIViewController.setup()
         
-        let arr = MutableObservableArray<VM>([])
-        let ds = DS<String>()
-    
-        let collectionView = UICollectionView()
-        collectionView.register(SuperCell.self)
-        
+//        let arr = MutableObservableArray<VM>([])
+//        let ds = DS<String>()
+//    
+//        let collectionView = UICollectionView()
 //        collectionView.register(SuperCell.self)
-//        arr.bind(to: collectionView, using: ds)
+//        
+//        collectionView.register(SuperCell.self)
+        //arr.bind2(to: collectionView, using: ds)
 
     }
     

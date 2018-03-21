@@ -29,7 +29,7 @@ public protocol SubjectProtocol: SignalProtocol, ObserverProtocol {
 }
 
 /// A type that is both a signal and an observer.
-open class Subject<Element>: SubjectProtocol {
+open class Subject<Element>: SubjectProtocol, DisposeBagProvider {
 
   private typealias Token = Int64
   private var nextToken: Token = 0
@@ -39,7 +39,7 @@ open class Subject<Element>: SubjectProtocol {
   public private(set) var isTerminated = false
 
   public let lock = NSRecursiveLock(name: "com.reactivekit.subject")
-  public let disposeBag = DisposeBag()
+  public let bag = DisposeBag()
 
   public init() {}
 
@@ -87,7 +87,7 @@ extension Subject: BindableProtocol {
 
   public func bind(signal: Signal<Element>) -> Disposable {
     return signal
-      .take(until: disposeBag.deallocated)
+      .take(until: bag.deallocated)
       .observeIn(.nonRecursive())
       .observeNext { [weak self] element in
         guard let s = self else { return }
@@ -149,24 +149,3 @@ public final class ReplayOneSubject<Element>: Subject<Element> {
   }
 }
 
-
-@available(*, deprecated, message: "All subjects now inherit 'Subject' that can be used in place of 'AnySubject'.")
-public final class AnySubject<Element>: SubjectProtocol {
-  private let baseObserve: (@escaping Observer<Element>) -> Disposable
-  private let baseOn: Observer<Element>
-
-  public let disposeBag = DisposeBag()
-
-  public init<S: SubjectProtocol>(base: S) where S.Element == Element {
-    baseObserve = base.observe
-    baseOn = base.on
-  }
-
-  public func on(_ event: Event<Element>) {
-    return baseOn(event)
-  }
-
-  public func observe(with observer: @escaping Observer<Element>) -> Disposable {
-    return baseObserve(observer)
-  }
-}

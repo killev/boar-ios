@@ -97,7 +97,7 @@ public class ObservableDictionary<Key: Hashable, Value>: SignalProtocol {
 extension ObservableDictionary: Deallocatable {
 
     public var deallocated: Signal<Void> {
-        return subject.disposeBag.deallocated
+        return subject.bag.deallocated
     }
 }
 

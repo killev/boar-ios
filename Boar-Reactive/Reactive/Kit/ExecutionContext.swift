@@ -147,12 +147,3 @@ public extension DispatchQueue {
     return disposable
   }
 }
-
-// MARK: Compatibility
-
-//@available(*, deprecated, message: "Use ExecutionContext.immediate instead.")
-//public let ImmediateExecutionContext: ExecutionContext = .immediate
-//
-//@available(*, deprecated, message: "Use ExecutionContext.immediateOnMain instead.")
-//public let ImmediateOnMainExecutionContext: ExecutionContext = .immediateOnMain
-

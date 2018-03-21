@@ -91,7 +91,7 @@ public class ObservableSet<Element: Hashable>: SignalProtocol {
 extension ObservableSet: Deallocatable {
 
     public var deallocated: Signal<Void> {
-        return subject.disposeBag.deallocated
+        return subject.bag.deallocated
     }
 }
 

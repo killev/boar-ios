@@ -74,6 +74,12 @@ public extension ReactiveExtensions where Base: NSObject {
             })
         }
     }
+    
+    public func keyPathProperty<T>(_ keyPath: ReferenceWritableKeyPath<Base, T>, startWithCurrentValue: Bool = true) -> SafePublishSubject<T> {
+        return SafePublishSubject<T>()
+        
+    }
+    
 }
 
 public extension ReactiveExtensions where Base: NSObject {

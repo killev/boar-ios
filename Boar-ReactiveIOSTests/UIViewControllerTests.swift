@@ -49,11 +49,6 @@ class UIViewControllerTests: XCTestCase {
     }
     
     func testExample() {
-        UIViewController.setup()
-        let ctrl = ModernCtrl()
-        //ctrl._vm = ModernCtrlVC()
-        let v = ctrl.view
-        ctrl.loadView()
     }
     
 }

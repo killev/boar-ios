@@ -200,7 +200,7 @@ public class Observable2DArray<SectionMetadata, Item>: SignalProtocol {
 extension Observable2DArray: Deallocatable {
 
     public var deallocated: Signal<Void> {
-        return subject.disposeBag.deallocated
+        return subject.bag.deallocated
     }
 }
 
