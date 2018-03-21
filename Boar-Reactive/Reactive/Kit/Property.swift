@@ -37,13 +37,8 @@ public class Property<Value>: PropertyProtocol, SubjectProtocol, BindableProtoco
   private let subject = PublishSubject<Value>()
   private let lock = NSRecursiveLock(name: "com.reactivekit.property")
 
-  @available(*, deprecated, renamed: "bag")
-  public var disposeBag: DisposeBag {
-    return subject.disposeBag
-  }
-
   public var bag: DisposeBag {
-    return subject.disposeBag
+    return subject.bag
   }
 
   /// Underlying value. Changing it emits `.next` event with new value.
