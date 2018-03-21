@@ -9,35 +9,6 @@
 import XCTest
 import Boar_Reactive
 
-extension Event {
-
-  func isEqualTo(_ event: Event<Element>) -> Bool {
-
-    switch (self, event) {
-    case (.completed, .completed):
-      return true
-    case (.failed, .failed):
-      return true
-    case (.next(let left), .next(let right)):
-      if let left = left as? Int, let right = right as? Int {
-        return left == right
-      } else if let left = left as? [Int], let right = right as? [Int] {
-        return left == right
-      } else if let left = left as? (Int?, Int), let right = right as? (Int?, Int) {
-        return left.0 == right.0 && left.1 == right.1
-      } else if let left = left as? String, let right = right as? String {
-        return left == right
-      } else if let left = left as? [String], let right = right as? [String] {
-        return left == right
-      } else {
-        fatalError("Cannot compare that element type. \(left)")
-      }
-    default:
-        return false
-    }
-  }
-}
-
 extension SignalProtocol {
   
   // Synchronous test

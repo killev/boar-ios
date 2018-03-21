@@ -72,6 +72,17 @@
 		D0856CC42062CCCF00352356 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC02062CCCF00352356 /* Helpers.swift */; };
 		D0856CC52062CCCF00352356 /* PropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC12062CCCF00352356 /* PropertyTests.swift */; };
 		D0856CC72062CCCF00352356 /* SignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC32062CCCF00352356 /* SignalTests.swift */; };
+		D0856CD42062FCD600352356 /* ObservableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC92062FCD500352356 /* ObservableArrayTests.swift */; };
+		D0856CD52062FCD600352356 /* UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCA2062FCD500352356 /* UIKitTests.swift */; };
+		D0856CD62062FCD600352356 /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCB2062FCD500352356 /* UITableViewTests.swift */; };
+		D0856CD72062FCD600352356 /* Observable2DArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCC2062FCD500352356 /* Observable2DArrayTests.swift */; };
+		D0856CD82062FCD600352356 /* ProtocolProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCD2062FCD500352356 /* ProtocolProxyTests.swift */; };
+		D0856CD92062FCD600352356 /* DynamicSubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCE2062FCD500352356 /* DynamicSubjectTests.swift */; };
+		D0856CDA2062FCD600352356 /* BondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CCF2062FCD600352356 /* BondTests.swift */; };
+		D0856CDB2062FCD600352356 /* ObservableSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CD02062FCD600352356 /* ObservableSetTests.swift */; };
+		D0856CDC2062FCD600352356 /* Helpers+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CD12062FCD600352356 /* Helpers+Bond.swift */; };
+		D0856CDD2062FCD600352356 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CD22062FCD600352356 /* NSObjectTests.swift */; };
+		D0856CDE2062FCD600352356 /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CD32062FCD600352356 /* UICollectionViewTests.swift */; };
 		D088857C202493EF001F6D4F /* ReContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857B202493EF001F6D4F /* ReContext.swift */; };
 		D088857E2024A266001F6D4F /* CoreDataDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857D2024A266001F6D4F /* CoreDataDriver.swift */; };
 		D08885802024A655001F6D4F /* DBContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088857F2024A655001F6D4F /* DBContext+Operations.swift */; };
@@ -372,6 +383,17 @@
 		D0856CC02062CCCF00352356 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		D0856CC12062CCCF00352356 /* PropertyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTests.swift; sourceTree = "<group>"; };
 		D0856CC32062CCCF00352356 /* SignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalTests.swift; sourceTree = "<group>"; };
+		D0856CC92062FCD500352356 /* ObservableArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableArrayTests.swift; sourceTree = "<group>"; };
+		D0856CCA2062FCD500352356 /* UIKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitTests.swift; sourceTree = "<group>"; };
+		D0856CCB2062FCD500352356 /* UITableViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
+		D0856CCC2062FCD500352356 /* Observable2DArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable2DArrayTests.swift; sourceTree = "<group>"; };
+		D0856CCD2062FCD500352356 /* ProtocolProxyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyTests.swift; sourceTree = "<group>"; };
+		D0856CCE2062FCD500352356 /* DynamicSubjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicSubjectTests.swift; sourceTree = "<group>"; };
+		D0856CCF2062FCD600352356 /* BondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondTests.swift; sourceTree = "<group>"; };
+		D0856CD02062FCD600352356 /* ObservableSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableSetTests.swift; sourceTree = "<group>"; };
+		D0856CD12062FCD600352356 /* Helpers+Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Helpers+Bond.swift"; sourceTree = "<group>"; };
+		D0856CD22062FCD600352356 /* NSObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectTests.swift; sourceTree = "<group>"; };
+		D0856CD32062FCD600352356 /* UICollectionViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewTests.swift; sourceTree = "<group>"; };
 		D088857B202493EF001F6D4F /* ReContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReContext.swift; sourceTree = "<group>"; };
 		D088857D2024A266001F6D4F /* CoreDataDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDriver.swift; sourceTree = "<group>"; };
 		D088857F2024A655001F6D4F /* DBContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBContext+Operations.swift"; sourceTree = "<group>"; };
@@ -822,6 +844,7 @@
 		D00E606F2012A40800771202 /* Boar-ReactiveTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0856CC82062FCB900352356 /* Bond */,
 				D0856CBF2062CC9000352356 /* Kit */,
 				D00E60722012A40800771202 /* Info.plist */,
 			);
@@ -839,6 +862,25 @@
 			);
 			name = Kit;
 			path = ReactiveTests/Kit;
+			sourceTree = "<group>";
+		};
+		D0856CC82062FCB900352356 /* Bond */ = {
+			isa = PBXGroup;
+			children = (
+				D0856CCF2062FCD600352356 /* BondTests.swift */,
+				D0856CCE2062FCD500352356 /* DynamicSubjectTests.swift */,
+				D0856CD12062FCD600352356 /* Helpers+Bond.swift */,
+				D0856CD22062FCD600352356 /* NSObjectTests.swift */,
+				D0856CCC2062FCD500352356 /* Observable2DArrayTests.swift */,
+				D0856CC92062FCD500352356 /* ObservableArrayTests.swift */,
+				D0856CD02062FCD600352356 /* ObservableSetTests.swift */,
+				D0856CCD2062FCD500352356 /* ProtocolProxyTests.swift */,
+				D0856CD32062FCD600352356 /* UICollectionViewTests.swift */,
+				D0856CCA2062FCD500352356 /* UIKitTests.swift */,
+				D0856CCB2062FCD500352356 /* UITableViewTests.swift */,
+			);
+			name = Bond;
+			path = ReactiveTests/Bond;
 			sourceTree = "<group>";
 		};
 		D08885812024A864001F6D4F /* CoreDataDriver */ = {
@@ -1684,10 +1726,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0856CD42062FCD600352356 /* ObservableArrayTests.swift in Sources */,
 				D00E60892012B96A00771202 /* Future+XCTest.swift in Sources */,
+				D0856CD52062FCD600352356 /* UIKitTests.swift in Sources */,
 				D0856CC42062CCCF00352356 /* Helpers.swift in Sources */,
+				D0856CD72062FCD600352356 /* Observable2DArrayTests.swift in Sources */,
+				D0856CD62062FCD600352356 /* UITableViewTests.swift in Sources */,
 				D0856CC72062CCCF00352356 /* SignalTests.swift in Sources */,
+				D0856CDD2062FCD600352356 /* NSObjectTests.swift in Sources */,
+				D0856CDE2062FCD600352356 /* UICollectionViewTests.swift in Sources */,
+				D0856CDA2062FCD600352356 /* BondTests.swift in Sources */,
 				D0856CC52062CCCF00352356 /* PropertyTests.swift in Sources */,
+				D0856CD92062FCD600352356 /* DynamicSubjectTests.swift in Sources */,
+				D0856CDC2062FCD600352356 /* Helpers+Bond.swift in Sources */,
+				D0856CD82062FCD600352356 /* ProtocolProxyTests.swift in Sources */,
+				D0856CDB2062FCD600352356 /* ObservableSetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
