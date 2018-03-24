@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Carthage/Checkouts/SwinjectStoryboard/SwinjectStoryboard.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Swinject/Swinject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ReactiveKit/ReactiveKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/ObjectMapper/ObjectMapper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Differ/Differ.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/BrightFutures/BrightFutures.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Bond/Bond.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/AlamofireObjectMapper/AlamofireObjectMapper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/AlamofireImage/AlamofireImage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Alamofire/Alamofire.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Boar.xcodeproj">
+   </FileRef>
+</Workspace>
