@@ -38,7 +38,7 @@
 		D00AF75B2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */; };
 		D00AF77520169552001B65D9 /* Boar_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_mvvm.framework */; };
 		D00AF77C20169552001B65D9 /* UIViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */; };
-		D00AF77E20169552001B65D9 /* Boar_ReactiveIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D00AF77E20169552001B65D9 /* Boar_mvvm.h in Headers */ = {isa = PBXBuildFile; fileRef = D00AF76E20169552001B65D9 /* Boar_mvvm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00AF78120169552001B65D9 /* Boar_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_mvvm.framework */; };
 		D00AF78220169552001B65D9 /* Boar_mvvm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D00AF76C20169552001B65D9 /* Boar_mvvm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D00AF78A2016956B001B65D9 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AF7892016956B001B65D9 /* VM.swift */; };
@@ -235,7 +235,7 @@
 			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D00AF76B20169552001B65D9;
-			remoteInfo = "Boar-ReactiveIOS";
+			remoteInfo = "Boar-mvvm";
 		};
 		D00AF77820169552001B65D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -249,7 +249,7 @@
 			containerPortal = D001ADA4200CF1C1006E8C36 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D00AF76B20169552001B65D9;
-			remoteInfo = "Boar-ReactiveIOS";
+			remoteInfo = "Boar-mvvm";
 		};
 		D00E603220128ABB00771202 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -344,7 +344,7 @@
 		D006651420221F2A00185ADC /* DBEntityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBEntityProtocol.swift; sourceTree = "<group>"; };
 		D00AF75A2013BA55001B65D9 /* NSManagedObjectContext+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Operations.swift"; sourceTree = "<group>"; };
 		D00AF76C20169552001B65D9 /* Boar_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boar_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_ReactiveIOS.h; sourceTree = "<group>"; };
+		D00AF76E20169552001B65D9 /* Boar_mvvm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boar_mvvm.h; sourceTree = "<group>"; };
 		D00AF76F20169552001B65D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00AF77420169552001B65D9 /* Boar-mvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boar-mvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00AF77B20169552001B65D9 /* UIViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTests.swift; sourceTree = "<group>"; };
@@ -726,7 +726,7 @@
 				D00AF79C2017CF54001B65D9 /* Router */,
 				D00AF79720177B2A001B65D9 /* Controllers */,
 				D00AF79420177833001B65D9 /* Collections */,
-				D00AF76E20169552001B65D9 /* Boar_ReactiveIOS.h */,
+				D00AF76E20169552001B65D9 /* Boar_mvvm.h */,
 				D00AF76F20169552001B65D9 /* Info.plist */,
 				D00AF7892016956B001B65D9 /* VM.swift */,
 			);
@@ -1112,7 +1112,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00AF77E20169552001B65D9 /* Boar_ReactiveIOS.h in Headers */,
+				D00AF77E20169552001B65D9 /* Boar_mvvm.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,7 +1218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D00AF78320169552001B65D9 /* Build configuration list for PBXNativeTarget "Boar-mvvm" */;
 			buildPhases = (
-				D00AF76720169552001B65D9 /* Sources */,
+				D00AF76720169552001B65D9 /* SourcBoar-mvvmes */,
 				D00AF76820169552001B65D9 /* Frameworks */,
 				D00AF76920169552001B65D9 /* Headers */,
 				D00AF76A20169552001B65D9 /* Resources */,
@@ -1228,7 +1228,7 @@
 			dependencies = (
 			);
 			name = "Boar-mvvm";
-			productName = "Boar-ReactiveIOS";
+			productName = "Boar-mvvm";
 			productReference = D00AF76C20169552001B65D9 /* Boar_mvvm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -1247,7 +1247,7 @@
 				D00AF77920169552001B65D9 /* PBXTargetDependency */,
 			);
 			name = "Boar-mvvmTests";
-			productName = "Boar-ReactiveIOSTests";
+			productName = "Boar-mvvmTests";
 			productReference = D00AF77420169552001B65D9 /* Boar-mvvmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -2136,10 +2136,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Boar-ReactiveIOS/Info.plist";
+				INFOPLIST_FILE = "Boar-mvvm/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-mvvm";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2166,10 +2166,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Boar-ReactiveIOS/Info.plist";
+				INFOPLIST_FILE = "Boar-mvvm/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-mvvm";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -2189,9 +2189,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Boar-ReactiveIOSTests/Info.plist";
+				INFOPLIST_FILE = "Boar-mvvmTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-mvvmTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2209,9 +2209,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Boar-ReactiveIOSTests/Info.plist";
+				INFOPLIST_FILE = "Boar-mvvmTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-ReactiveIOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "killev.Boar-mvvmTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
