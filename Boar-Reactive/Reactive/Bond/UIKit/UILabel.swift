@@ -39,6 +39,10 @@ public extension ReactiveExtensions where Base: UILabel {
     public var textColor: Bond<UIColor?> {
         return bond { $0.textColor = $1 }
     }
+    
+    var font: Bond<UIFont>{
+        return bond{ $0.font = $1 }
+    }
 }
 
 extension UILabel: BindableProtocol {

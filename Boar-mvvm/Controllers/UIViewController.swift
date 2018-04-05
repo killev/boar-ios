@@ -87,7 +87,6 @@ extension UIViewController {
     }
     @objc func nsh_viewDidDisappear(_ animated: Bool) {
         self.nsh_viewDidDisappear(animated)
-        //unadvice()
     }
 }
 
@@ -96,13 +95,6 @@ public protocol VCLifeCycle {
     func viewWillAppearImpl()
 }
 
-
-// public extension VCLifeCycle where Self: UIViewController {
-//    func viewDidLoadImpl() {
-//    }
-//    func viewWillAppearImpl(){
-//    }
-//}
 
 public extension VCLifeCycle where Self: UIViewController {
     func viewDidLoadImpl() {

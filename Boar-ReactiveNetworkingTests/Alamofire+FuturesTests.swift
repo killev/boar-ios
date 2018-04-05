@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Alamofire+FuturesTests.swift
 //  Boar-ReactiveNetworkingTests
 //
 //  Created by Peter Ovchinnikov on 1/15/18.
@@ -41,7 +41,7 @@ class AlamofireFuturesTests: XCTestCase {
                      method: .get,
                      parameters: [:],
                      encoding: URLEncoding.default,
-                     headers: Auth.basic(user: "killev", password: "CrossPlusPlus50000"))
+                     headers: Auth.basic(user: "killev", password: "Bla"))
             .responseArray(GH_Issue.self)
         
         XCTAssertFutureSuccess("testSimple", future: issues){ res in

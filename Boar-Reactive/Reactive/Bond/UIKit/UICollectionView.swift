@@ -51,12 +51,6 @@ private struct SimpleCollectionViewBond<DataSource: DataSourceProtocol>: Collect
         return createCell(dataSource, indexPath, collectionView)
     }
 }
-
-public extension ReactiveExtensions where Base: UICollectionViewCell {
-    public var isSelected: DynamicSubject<Bool> {
-        return keyPath("selected", ofExpectedType: Bool.self)
-    }
-}
     
 public extension ReactiveExtensions where Base: UICollectionView {
 

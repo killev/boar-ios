@@ -51,6 +51,16 @@ extension ReactiveExtensions where Base: UIView {
     public var tintColor: Bond<UIColor?> {
         return bond { $0.tintColor = $1 }
     }
+    
+    var frame: Signal1<CGRect> {
+        return self.keyPath(\.frame)
+    }
+    
+    var borderColor: Bond<UIColor?> {
+        return self.bond { ctrl, value in
+            ctrl.layer.borderColor = value?.cgColor
+        }
+    }
 }
 
 #endif

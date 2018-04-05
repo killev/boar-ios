@@ -263,6 +263,11 @@ public final class DisposeBag: DisposeBagProtocol {
   }
 }
 
+public protocol ReuseDisposeBagProvider {
+    var reuseBag: DisposeBag { get }
+}
+
+
 public extension Disposable {
 
   /// Put the disposable in the given bag. Disposable will be disposed when
