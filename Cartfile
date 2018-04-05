@@ -9,8 +9,8 @@ github "Alamofire/AlamofireNetworkActivityIndicator"
 # Context and DI
 # github "Swinject/Swinject-CodeGeneration"
 
-github "Swinject/Swinject"
-github "Swinject/SwinjectStoryboard"
+#github "Swinject/Swinject"
+#github "Swinject/SwinjectStoryboard"
 
 #Data
-github "realm/realm-cocoa"
+#github "realm/realm-cocoa"

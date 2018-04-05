@@ -120,16 +120,4 @@ public func materialize<T>(_ f: @autoclosure () throws -> T) -> Result<T> {
 	}
 }
 
-// MARK: - migration support
-extension Result {
-	@available(*, unavailable, renamed: "success")
-	public static func Success(_: T) -> Result<T> {
-		fatalError()
-	}
-
-	@available(*, unavailable, renamed: "failure")
-	public static func Failure(_: Error) -> Result<T> {
-		fatalError()
-	}
-}
 

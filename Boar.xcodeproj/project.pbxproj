@@ -68,6 +68,9 @@
 		D00E608A2012B96C00771202 /* Future+XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001AE24200D41FF006E8C36 /* Future+XCTest.swift */; };
 		D00E60932012CC5400771202 /* CoreDataDriver+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */; };
 		D00E6097201353F300771202 /* CDContextFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E6096201353F300771202 /* CDContextFetchTests.swift */; };
+		D03225D52076ADB100B1AAED /* Diff+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03225D22076ADB100B1AAED /* Diff+AppKit.swift */; };
+		D03225D62076ADB100B1AAED /* NestedBatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03225D32076ADB100B1AAED /* NestedBatchUpdate.swift */; };
+		D03225D72076ADB100B1AAED /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03225D42076ADB100B1AAED /* BatchUpdate.swift */; };
 		D04B0455201B4C5F002A61E9 /* Signals+observeInner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */; };
 		D0856CC42062CCCF00352356 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC02062CCCF00352356 /* Helpers.swift */; };
 		D0856CC52062CCCF00352356 /* PropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0856CC12062CCCF00352356 /* PropertyTests.swift */; };
@@ -378,6 +381,9 @@
 		D00E60872012B83000771202 /* CoreDataFetchedObservable.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFetchedObservable.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D00E60922012CC5400771202 /* CoreDataDriver+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataDriver+Operations.swift"; sourceTree = "<group>"; };
 		D00E6096201353F300771202 /* CDContextFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextFetchTests.swift; sourceTree = "<group>"; };
+		D03225D22076ADB100B1AAED /* Diff+AppKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diff+AppKit.swift"; sourceTree = "<group>"; };
+		D03225D32076ADB100B1AAED /* NestedBatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedBatchUpdate.swift; sourceTree = "<group>"; };
+		D03225D42076ADB100B1AAED /* BatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchUpdate.swift; sourceTree = "<group>"; };
 		D04B044E201A5CCB002A61E9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D04B0454201B4C5F002A61E9 /* Signals+observeInner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signals+observeInner.swift"; sourceTree = "<group>"; };
 		D0856CC02062CCCF00352356 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -990,6 +996,9 @@
 		D0F687E52060530C00743D99 /* Differ */ = {
 			isa = PBXGroup;
 			children = (
+				D03225D42076ADB100B1AAED /* BatchUpdate.swift */,
+				D03225D22076ADB100B1AAED /* Diff+AppKit.swift */,
+				D03225D32076ADB100B1AAED /* NestedBatchUpdate.swift */,
 				D0F687EE2060533800743D99 /* Diff.swift */,
 				D0F687E72060533700743D99 /* Diff+UIKit.swift */,
 				D0F687F12060533800743D99 /* ExtendedDiff.swift */,
@@ -1613,6 +1622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03225D52076ADB100B1AAED /* Diff+AppKit.swift in Sources */,
 				D0F68866206055A700743D99 /* UIButton.swift in Sources */,
 				D0F68836206053ED00743D99 /* Observable2DArray.swift in Sources */,
 				D0F6888220605BE400743D99 /* GenericPatch.swift in Sources */,
@@ -1642,6 +1652,7 @@
 				D0F6886F206055A700743D99 /* UITableView.swift in Sources */,
 				D0F6880E2060536800743D99 /* Observable.swift in Sources */,
 				D0F6887C20605BAF00743D99 /* NestedExtendedDiff.swift in Sources */,
+				D03225D62076ADB100B1AAED /* NestedBatchUpdate.swift in Sources */,
 				D0F6878A2060291700743D99 /* Result+BrightFutures.swift in Sources */,
 				D0F6880F2060536800743D99 /* DataSource.swift in Sources */,
 				D0F688212060538600743D99 /* NSStatusBarButton.swift in Sources */,
@@ -1702,6 +1713,7 @@
 				D0F68878206055A700743D99 /* UIView.swift in Sources */,
 				D0F687D8206050C100743D99 /* Lock.swift in Sources */,
 				D0F6888420605BE400743D99 /* NestedDiff.swift in Sources */,
+				D03225D72076ADB100B1AAED /* BatchUpdate.swift in Sources */,
 				D0F687D3206050C100743D99 /* Connectable.swift in Sources */,
 				D0F687E0206050C100743D99 /* SignalProtocol.swift in Sources */,
 				D0F68834206053ED00743D99 /* ObservableSet.swift in Sources */,

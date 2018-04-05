@@ -185,28 +185,6 @@ public extension Future where T == Void {
     }
 }
 
-//extension Error {
-//    public static let wrongFilterCode = 80001
-//    public static let wrongFilter = Error.Err(Error.wrongFilterCode, userInfo: ["Message" : "Filter didn't pass the conditions"])
-//}
-//
-//
-//public extension Future where E == NSError {
-//    public func filter(_ p: @escaping (Value.Value) -> Bool) -> Future<Value.Value, NSError> {
-//        return flatMap(ImmediateExecutionContext) { value -> Future<Value.Value, NSError> in
-//            if p(value) {
-//                return Future(value: value)
-//            } else {
-//                return Future(error: Error.wrongFilter)
-//            }
-//        }
-//    }
-//    
-//    
-//}
-
-
-
 public extension SignalProtocol where Element : OptionalProtocol {
     
     func recoverNil(_ def: @autoclosure @escaping ()->Element.Wrapped)-> Signal<Element.Wrapped> {
